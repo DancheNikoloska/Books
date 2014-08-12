@@ -12,9 +12,7 @@
 </head>
 
 <body>
-
-<div id="templatemo_container">
-	<div id="templatemo_menu">
+<div id="templatemo_menu">
     	<ul>
             <li><a href="index.html" class="current">Home</a></li>
             <li><a href="subpage.html">Search</a></li>
@@ -23,20 +21,17 @@
             
     	</ul>
     </div> <!-- end of menu -->
+<div id="templatemo_container">
+	
     
-    <div id="templatemo_header">
-    	
-        
-        
-        
-    </div> <!-- end of header -->
+    
     
     <asp:ContentPlaceHolder ID="Content1" runat="server"></asp:ContentPlaceHolder>
     
     <div id="templatemo_footer">
     
 	       <a href="subpage.html">Home</a> | <a href="subpage.html">Search</a> | <a href="subpage.html">Books</a> | <a href="#">New Releases</a> | <a href="#">FAQs</a> | <a href="#">Contact Us</a><br />
-        Copyright © 2024 <a href="#"><strong>Your Company Name</strong></a> | Designed by <a href="http://www.templatemo.com" target="_parent" title="free css templates">Free CSS Templates</a>	</div> 
+        Copyright © 2024 <a href="#"><strong>Danche</strong></a> | Designed by Danica Nikoloska & Goran Gjorgievski	</div> 
     <!-- end of footer -->
 <!--  Free CSS Template www.templatemo.com -->
 </div> <!-- end of container -->

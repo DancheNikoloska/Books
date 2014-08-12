@@ -3,6 +3,13 @@
 <asp:Content ContentPlaceHolderID="Content1" runat="server">
 
 
+    <div id="templatemo_header">
+    	
+        
+        
+        
+    </div> <!-- end of header -->
+
     <div id="templatemo_content">
     	
         <div id="templatemo_content_left">
