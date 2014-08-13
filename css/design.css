@@ -246,9 +246,9 @@ img {
 #templatemo_content_right .templatemo_product_box {
 	float: left;
 	width: 300px;
-	height: 210px;
-	padding: 7px;
-	border: 1px solid #333;
+	height: 215px;
+	padding: 9px;
+	border: 2px solid #7A1900;
     
 }
 
@@ -303,15 +303,17 @@ img {
 .templatemo_product_box img {
 	float: left;
 	margin-right: 20px;
+    margin-bottom:25px;
+    margin-top:0px;
 }
 
 .templatemo_product_box .product_info {
 	float: left;
-	width: 180px;
+	width: 170px;
 }
 
 .product_info p {
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 }
 
 /* end of content */
