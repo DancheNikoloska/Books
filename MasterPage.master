@@ -2,13 +2,13 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Book Store Template, Free CSS Template, CSS Website Layout</title>
-<meta name="keywords" content="Book Store Template, Free CSS Template, CSS Website Layout, CSS, HTML" />
-<meta name="description" content="Book Store Template, Free CSS Template, Download CSS Website" />
-<link href="css/design.css" rel="stylesheet" type="text/css" />
+<html xmlns="http://www.w3.org/1999/xhtml" runat="server">
+<head runat="server">
+<meta runat="server" http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title runat="server">Book Store Template, Free CSS Template, CSS Website Layout</title>
+<meta runat="server" name="keywords" content="Book Store Template, Free CSS Template, CSS Website Layout, CSS, HTML" />
+<meta runat="server" name="description" content="Book Store Template, Free CSS Template, Download CSS Website" />
+<link runat="server" href="css/design.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body runat="server">

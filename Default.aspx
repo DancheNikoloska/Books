@@ -14,8 +14,8 @@
     	
         <div id="templatemo_content_left" >
         	<div class="templatemo_content_left_section" >
-            	<h1>Categories</h1>
-                <ul>
+            	<h1 >Categories</h1>
+                <ul >
                     <li ><a href="subpage.html"  >Donec accumsan urna</a></li>
                     <li ><a href="subpage.html"  >Proin vulputate justo</a></li>
                     <li ><a href="#">In sed risus ac feli</a></li>
@@ -50,7 +50,7 @@
         </div> <!-- end of content left -->
         
         <div  id="templatemo_content_right">
-        	<div class="templatemo_product_box" >
+        	<div class="templatemo_product_box">
             	<h1>Photography  <span >(by Best Author)</span></h1>
    	      <img src="css/images/something.jpg" alt="image"   />
                 <div class="product_info" >
