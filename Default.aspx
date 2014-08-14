@@ -10,11 +10,14 @@
         
     </div> <!-- end of header -->
 
+  
+
+
     <div id="templatemo_content">
     	
         <div id="templatemo_content_left">
         	<div class="templatemo_content_left_section">
-            	<h1>Categories</h1>
+            	<h1>Избери жанр</h1>
                 <ul>
                     <li><a href="subpage.html">Donec accumsan urna</a></li>
                     <li><a href="subpage.html">Proin vulputate justo</a></li>
