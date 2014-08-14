@@ -126,7 +126,28 @@ img {
  float: right;
  margin-top: -17px;
  height: 21px;
+ overflow:visible;
 }
+#logged {
+ display: inline;
+ width: 350px;
+ float: right;
+ margin-right: -125px;
+ margin-top: -16px;
+ height: 21px;
+ overflow: visible;
+ color: #7A1900;
+
+}
+#logged a {
+    text-decoration:none;
+    font-weight: bold;
+    color: #7A1900;
+ }
+#logged a:hover {
+   
+    color: #E62E00;
+ }
 
 /* end of menu*/
 
