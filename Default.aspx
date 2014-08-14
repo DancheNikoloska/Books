@@ -50,64 +50,12 @@
         </div> <!-- end of content left -->
         
         <div  id="templatemo_content_right" >
-        	<div class="templatemo_product_box" runat="server">
-            	<h1 >Photography  <span >(by Best Author)</span></h1>
-   	      <img src="css/images/something.jpg" alt="image"   />
-                <div class="product_info" >
-                	<p >Etiam luctus. Quisque facilisis suscipit elit. Curabiturdfd jkdjega du bist eine Frau</p>
-                  <h3 >$55</h3>
-                   
-                    <div class="detail_button" ><a href="subpage.html" >Детали</a></div>
-                </div>
-                <div class="cleaner" >&nbsp;</div>
-            </div>
-            
-            <div class="cleaner_with_width" >&nbsp;</div>
-            
-          <div class="templatemo_product_box" runat="server" >
-            	<h1 >Cooking  <span >(by New Author)</span></h1>
-   	      <img src="css/images/nora.jpg" alt="image"  />
-                <div class="product_info" >
-                	<p>Etiam luctus. Quisque facilisis suscipit elit. Curabiturdfd jkdjega du bist eine Frau</p>
-                  <h3>$55</h3>
-                   
-                    <div class="detail_button"  ><a href="subpage.html" >Детали</a></div>
-                </div>
-                <div class="cleaner"  >&nbsp;</div>
-            </div>
-            <div class="cleaner_with_height"  >&nbsp;</div>
-            
-            <div class="templatemo_product_box" runat="server" >
-            	<h1  >Gardening <span  >(by Famous Author)</span></h1>
-   	      <img src="css/images/awakening.jpg" alt="image"   />
-                <div class="product_info"  >
-                	<p  >Ut fringilla enim sed turpis. Sed justo dolor, convallis at. Tuto presente con tigo ese para ti.</p>
-                    <h3  >$65</h3>
-                    
-                    <div class="detail_button"  ><a href="subpage.html"  >Детали</a></div>
-                </div>
-                <div class="cleaner"  >&nbsp;</div>
-            </div>
-            
-            <div class="cleaner_with_width"  >&nbsp;</div>
-            
-            <div class="templatemo_product_box" runat="server" >
-            	<h1  >Sushi Book  <span  >(by Japanese Name)</span></h1>
-            	<img src="css/images/emotional_intelligence.jpg" alt="image"   />
-                <div class="product_info"  >
-                	<p  >Lorem ipsum dolor sit amet, consectetur adipiscing elit. vamos el dia de noche con nosotros. </p>
-                    <h3  >$45</h3>
-                 
-                    <div class="detail_button"  ><a href="subpage.html"  >Детали</a></div>
-                </div>
-                <div class="cleaner"  >&nbsp;</div>
-            </div>
-            
-            <div class="cleaner_with_height"  >&nbsp;</div>
-            
-           
-        </div> <!-- end of content right -->
-    
+        	<div id="box1" class="templatemo_product_box" runat="server"></div> 
+            <div id="box2" class="templatemo_product_box" runat="server"></div>
+            <div id="box3" class="templatemo_product_box" runat="server"></div>
+            <div id="box4" class="templatemo_product_box" runat="server"></div> 
+            <!-- end of content right -->
+        </div>
     	<div class="cleaner_with_height"  >&nbsp;</div>
     </div> <!-- end of content -->
 </asp:Content>
