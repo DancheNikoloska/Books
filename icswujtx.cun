@@ -59,56 +59,56 @@
                    
                     <div class="detail_button" runat="server"><a href="subpage.html" runat="server">Детали</a></div>
                 </div>
-                <div class="cleaner" runat="server">&nbsp;</div>
+                <div class="cleaner">&nbsp;</div>
             </div>
             
-            <div class="cleaner_with_width" runat="server">&nbsp;</div>
+            <div class="cleaner_with_width">&nbsp;</div>
             
-          <div class="templatemo_product_box" runat="server">
-            	<h1 runat="server">Cooking  <span runat="server">(by New Author)</span></h1>
-   	      <img src="css/images/nora.jpg" alt="image" runat="server" />
-                <div class="product_info" runat="server">
-                	<p runat="server">Etiam luctus. Quisque facilisis suscipit elit. Curabiturdfd jkdjega du bist eine Frau</p>
-                  <h3 runat="server">$55</h3>
+          <div class="templatemo_product_box">
+            	<h1>Cooking  <span>(by New Author)</span></h1>
+   	      <img src="css/images/nora.jpg" alt="image" />
+                <div class="product_info">
+                	<p>Etiam luctus. Quisque facilisis suscipit elit. Curabiturdfd jkdjega du bist eine Frau</p>
+                  <h3>$55</h3>
                    
-                    <div class="detail_button" runat="server"><a href="subpage.html" runat="server">Детали</a></div>
+                    <div class="detail_button"><a href="subpage.html">Детали</a></div>
                 </div>
-                <div class="cleaner" runat="server">&nbsp;</div>
+                <div class="cleaner">&nbsp;</div>
             </div>
-            <div class="cleaner_with_height" runat="server">&nbsp;</div>
+            <div class="cleaner_with_height">&nbsp;</div>
             
-            <div class="templatemo_product_box" runat="server">
-            	<h1 runat="server">Gardening <span runat="server">(by Famous Author)</span></h1>
-   	      <img src="css/images/awakening.jpg" alt="image" runat="server" />
-                <div class="product_info" runat="server">
-                	<p runat="server">Ut fringilla enim sed turpis. Sed justo dolor, convallis at. Tuto presente con tigo ese para ti.</p>
-                    <h3 runat="server">$65</h3>
+            <div class="templatemo_product_box">
+            	<h1>Gardening <span>(by Famous Author)</span></h1>
+   	      <img src="css/images/awakening.jpg" alt="image" />
+                <div class="product_info">
+                	<p>Ut fringilla enim sed turpis. Sed justo dolor, convallis at. Tuto presente con tigo ese para ti.</p>
+                    <h3>$65</h3>
                     
-                    <div class="detail_button" runat="server"><a href="subpage.html" runat="server">Детали</a></div>
+                    <div class="detail_button"><a href="subpage.html">Детали</a></div>
                 </div>
-                <div class="cleaner" runat="server">&nbsp;</div>
+                <div class="cleaner">&nbsp;</div>
             </div>
             
-            <div class="cleaner_with_width" runat="server">&nbsp;</div>
+            <div class="cleaner_with_width">&nbsp;</div>
             
-            <div class="templatemo_product_box" runat="server">
-            	<h1 runat="server">Sushi Book  <span runat="server">(by Japanese Name)</span></h1>
-            	<img src="css/images/emotional_intelligence.jpg" alt="image" runat="server" />
-                <div class="product_info" runat="server">
-                	<p runat="server">Lorem ipsum dolor sit amet, consectetur adipiscing elit. vamos el dia de noche con nosotros. </p>
-                    <h3 runat="server">$45</h3>
+            <div class="templatemo_product_box">
+            	<h1>Sushi Book  <span>(by Japanese Name)</span></h1>
+            	<img src="css/images/emotional_intelligence.jpg" alt="image" />
+                <div class="product_info">
+                	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. vamos el dia de noche con nosotros. </p>
+                    <h3>$45</h3>
                  
-                    <div class="detail_button" runat="server"><a href="subpage.html" runat="server">Детали</a></div>
+                    <div class="detail_button"><a href="subpage.html">Детали</a></div>
                 </div>
-                <div class="cleaner" runat="server">&nbsp;</div>
+                <div class="cleaner">&nbsp;</div>
             </div>
             
-            <div class="cleaner_with_height" runat="server">&nbsp;</div>
+            <div class="cleaner_with_height">&nbsp;</div>
             
            
         </div> <!-- end of content right -->
     
-    	<div class="cleaner_with_height" runat="server">&nbsp;</div>
+    	<div class="cleaner_with_height">&nbsp;</div>
     </div> <!-- end of content -->
 </asp:Content>
 
