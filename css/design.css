@@ -120,6 +120,13 @@ img {
 	color: #7A1900;
 
 }
+#login {
+ display: inline;
+ width: 250px;
+ float: right;
+ margin-top: -17px;
+ height: 21px;
+}
 
 /* end of menu*/
 
@@ -194,7 +201,7 @@ img {
 	float: left;
 	width: 188px;
 	padding: 10px;
-	background-color: #E3DEC1; /*#EBE2C3*/
+	background-color: #EBE2C3; 
 	border: 1px solid #212120;
 }
 
