@@ -54,7 +54,7 @@
         
         <div id="templatemo_content_right">
         	<div class="templatemo_product_box">
-            	<h1>Photography  <span>(by Best Author)</span></h1>
+            	<h1 id="header1" accesskey="header1">Photography  <span id="head1">(by Best Author)</span></h1>
    	      <img src="css/images/something.jpg" alt="image" />
                 <div class="product_info">
                 	<p>Etiam luctus. Quisque facilisis suscipit elit. Curabiturdfd jkdjega du bist eine Frau</p>
