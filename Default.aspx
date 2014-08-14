@@ -14,8 +14,8 @@
     	
         <div id="templatemo_content_left" >
         	<div class="templatemo_content_left_section" >
-            	<h1 >Categories</h1>
-                <ul >
+            	<h1>Categories</h1>
+                <ul>
                     <li ><a href="subpage.html"  >Donec accumsan urna</a></li>
                     <li ><a href="subpage.html"  >Proin vulputate justo</a></li>
                     <li ><a href="#">In sed risus ac feli</a></li>
@@ -49,9 +49,9 @@
 			</div>
         </div> <!-- end of content left -->
         
-        <div  id="templatemo_content_right">
-        	<div class="templatemo_product_box">
-            	<h1>Photography  <span >(by Best Author)</span></h1>
+        <div  id="templatemo_content_right" >
+        	<div class="templatemo_product_box" runat="server">
+            	<h1 >Photography  <span >(by Best Author)</span></h1>
    	      <img src="css/images/something.jpg" alt="image"   />
                 <div class="product_info" >
                 	<p >Etiam luctus. Quisque facilisis suscipit elit. Curabiturdfd jkdjega du bist eine Frau</p>
@@ -64,7 +64,7 @@
             
             <div class="cleaner_with_width" >&nbsp;</div>
             
-          <div class="templatemo_product_box" >
+          <div class="templatemo_product_box" runat="server" >
             	<h1 >Cooking  <span >(by New Author)</span></h1>
    	      <img src="css/images/nora.jpg" alt="image"  />
                 <div class="product_info" >
@@ -77,7 +77,7 @@
             </div>
             <div class="cleaner_with_height"  >&nbsp;</div>
             
-            <div class="templatemo_product_box"  >
+            <div class="templatemo_product_box" runat="server" >
             	<h1  >Gardening <span  >(by Famous Author)</span></h1>
    	      <img src="css/images/awakening.jpg" alt="image"   />
                 <div class="product_info"  >
@@ -91,7 +91,7 @@
             
             <div class="cleaner_with_width"  >&nbsp;</div>
             
-            <div class="templatemo_product_box"  >
+            <div class="templatemo_product_box" runat="server" >
             	<h1  >Sushi Book  <span  >(by Japanese Name)</span></h1>
             	<img src="css/images/emotional_intelligence.jpg" alt="image"   />
                 <div class="product_info"  >
