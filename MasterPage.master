@@ -25,7 +25,7 @@
     	</ul>
     <form id="login" runat="server">
         <div class="container" >
-	<a id="modal_trigger" href="#modal" class="btn">Login/Register</a>
+	<a id="modal_trigger"  href="#modal" class="btn">Најава/Регистрација</a>
 
 	<div id="modal" class="popupContainer" style="display:none; margin-top: -155px;">
 		<header class="popupHeader">
