@@ -40,8 +40,8 @@
             	</ul>
             </div>
 			<div  >
-            	<a href="#" ><img style="float:left" src="css/images/fbb.jpg" /></a>
-               <a href="#"><img style="float:right" src="css/images/follow.png" /></a>
+            	<a href="#" ><img style="float:left" src="css/images/fb.jpg" /></a>
+               <a href="#"><img style="float:right" src="css/images/twitter.jpg" /></a>
                 
             </div>
             
