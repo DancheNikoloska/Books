@@ -35,7 +35,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
         
         //connection to database
-        
+        bool valid = false;
         SqlConnection konekcija = new SqlConnection();
         konekcija.ConnectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
         string sql = "SELECT * FROM USERS WHERE email='"+ email.Text.ToString()+"' and password='"+ password.Text.ToString() + "'";
@@ -50,8 +50,8 @@ public partial class MasterPage : System.Web.UI.MasterPage
             {
                 
                 if(reader["email"].ToString()!=null){
-                    
-                   
+
+                    valid = true;
                     Session["username"] = reader["name"] + " " + reader["surname"];
                     Response.Redirect("Default.aspx", false);
                     
@@ -62,12 +62,43 @@ public partial class MasterPage : System.Web.UI.MasterPage
         }
         catch { }
         finally { konekcija.Close(); }
-        
+        if (!valid) {
+            Response.Write("<p style=\"margin-left: 37%;background: white;width: 260px;height: 20px; border-left: 2px solid #7A1900; border-bottom: 2px solid #7A1900; border-right: 2px solid #7A1900;font-weight: bold; color:#B94629;\">Невалидна емаил адреса или лозинка.</p>");
+        }
         
     }
     protected void Button2_Click(object sender, EventArgs e)
     {
-        //database connection
+        bool valid = false;
 
+        //get inputs
+        string name = TextBox1.Text.ToString();
+        string surname = TextBox2.Text.ToString();
+        string email = TextBox3.Text.ToString();
+        string address=null;
+        if(TextBox4.Text!=null)
+         address = TextBox4.Text.ToString();
+        string password = TextBox6.Text.ToString();
+        
+         
+        //database connection
+        SqlConnection konekcija = new SqlConnection();
+        konekcija.ConnectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
+        string sql = "INSERT INTO USERS VALUES('"+name+"','"+surname+"','"+email+"','"+address+"','"+password+"',"+0+")";
+        SqlCommand komanda = new SqlCommand(sql, konekcija);
+        try
+        {
+            konekcija.Open();
+            komanda.ExecuteNonQuery();
+            valid = true;
+            
+
+        }
+        catch { }
+        finally { konekcija.Close(); }
+        if (valid) { 
+        Session["username"] = name + " " + surname;
+        Response.Redirect("Default.aspx", false);
+        }
     }
 }

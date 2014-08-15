@@ -24,13 +24,13 @@
             
     	</ul>
     <form id="login" runat="server">
-        <div class="container">
+        <div class="container" >
 	<a id="modal_trigger" href="#modal" class="btn">Login/Register</a>
 
-	<div id="modal" class="popupContainer" style="display:none;">
+	<div id="modal" class="popupContainer" style="display:none; margin-top: -155px;">
 		<header class="popupHeader">
-			<span class="header_title">Login</span>
-			<span class="modal_close">Close</span>
+			<span class="header_title">Најава</span>
+			<span class="modal_close">Затвори</span>
 		</header>
 		
 		<section class="popupBody">
@@ -39,51 +39,51 @@
 				<div class="">
 					<a href="#" class="social_box fb">
 						<span class="icon"><i class="fa fa-facebook"></i></span>
-						<span class="icon_title">Connect with Facebook</span>
+						<span class="icon_title">Конектирајте се со Facebook</span>
 						
 					</a>
 
 					<a href="#" class="social_box google">
 						<span class="icon"><i class="fa fa-google-plus"></i></span>
-						<span class="icon_title">Connect with Google</span>
+						<span class="icon_title">Конектирајте се со Google</span>
 					</a>
 				</div>
 
 				<div class="centeredText">
-					<span>Or use your Email address</span>
+					<span>Или со Вашата е-маил адреса</span>
 				</div>
 
 				<div class="action_btns">
-					<div class="one_half"><a href="#" id="login_form" class="btn">Login</a></div>
-					<div class="one_half last"><a href="#" id="register_form" class="btn">Sign up</a></div>
+					<div class="one_half"><a href="#" id="login_form" class="btn">Најава</a></div>
+					<div class="one_half last"><a href="#" id="register_form" class="btn">Регистрација</a></div>
 				</div>
 			</div>
 
 			<!-- Username & Password Login form -->
 			<div class="user_login">
 				<div>
-					<label>Email</label>
+					<label>Емаил</label>
 					 <asp:TextBox id="email"  runat="server"></asp:TextBox>
 					<br />
 
-					<label>Password</label>
+					<label>Лозинка</label>
 					
-                     <asp:TextBox ID="password" runat="server"></asp:TextBox>
+                     <asp:TextBox TextMode="Password"  ID="password" runat="server"></asp:TextBox>
 					<br />
 
 					<div class="checkbox">
 						<input id="remember" type="checkbox" />
-						<label for="remember">Remember me on this computer</label>
+						<label for="remember">Запамети ме на овој компјутер</label>
 					</div>
 
 					<div class="action_btns">
 						<div class="one_half">
-                            <a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a>
+                            <a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Назад</a>
 
 						</div>
 						<div class="one_half last">
                             
-                            <asp:Button  OnClick="Button1_Click" CausesValidation="false"  ID="Button1" CssClass="btn btn_red login_btn_asp" runat="server" Text="Login"  ></asp:Button>
+                            <asp:Button  OnClick="Button1_Click" CausesValidation="false"  ID="Button1" CssClass="btn btn_red login_btn_asp" runat="server" Text="Најава"  ></asp:Button>
                             
 						</div>
                         
@@ -94,29 +94,50 @@
 			</div>
 
 			<!-- Register Form -->
-			<div class="user_register">
+			<div class="user_register" style="margin-top: 0px;">
 				<div >
-					<label>Full Name</label>
-					<input type="text" />
+					<label>Име*</label>
+					<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator Font-Bold="true"  ControlToValidate="TextBox1" ForeColor="#B94629" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Името е задолжително."></asp:RequiredFieldValidator>
+					<br />
+                    <br />
+
+                    <label>Презиме*</label>
+                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator Font-Bold="true"  ControlToValidate="TextBox2" ForeColor="#B94629" ID="RequiredFieldValidator2" runat="server" ErrorMessage="Презимето е задолжително."></asp:RequiredFieldValidator>
+					<br />
+                    <br />
+
+					<label>Емаил*</label>
+                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator Font-Bold="true" Margin="5px" ControlToValidate="TextBox3" ForeColor="#B94629" ID="RequiredFieldValidator3" runat="server" ErrorMessage="Емаил адресата е задолжителна."></asp:RequiredFieldValidator> <br />
+                    <asp:RegularExpressionValidator Font-Bold="true"  ControlToValidate="TextBox3" ForeColor="#B94629" ID="RegularExpressionValidator1" ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" runat="server" ErrorMessage="Невалидна емаил адреса."></asp:RegularExpressionValidator>
 					<br />
 
-					<label>Email Address</label>
-					<input type="email" />
-					<br />
+                    <label>Адреса</label>
+                    <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
 
-					<label>Password</label>
-					<input type="password" />
 					<br />
+                    
+
+                   
+					<label>Лозинка*</label>
+                    <asp:TextBox TextMode="Password" ID="TextBox6" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator Font-Bold="true"  ControlToValidate="TextBox6" ForeColor="#B94629" ID="RequiredFieldValidator4" runat="server" ErrorMessage="Лозинката е задолжителна."></asp:RequiredFieldValidator>
+					<br />
+                    <br />
+
+                    
 
 					<div class="checkbox">
 						<input id="send_updates" type="checkbox" />
-						<label for="send_updates">Send me occasional email updates</label>
+						<label for="send_updates">Испраќајте ми известувања на емаил.</label>
 					</div>
 
 					<div class="action_btns" >
-						<div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+						<div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Назад</a></div>
 						
-                        <asp:Button ID="Button2" runat="server" CssClass="btn btn_red login_btn_asp btn_signup" Text="Register" OnClick="Button2_Click" />
+                        <asp:Button ID="Button2" runat="server" CssClass="btn btn_red login_btn_asp btn_signup" Text="Регистрирај" OnClick="Button2_Click" />
 					</div>
 				</div>
 			</div>
