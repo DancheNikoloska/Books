@@ -83,7 +83,7 @@
 						</div>
 						<div class="one_half last">
                             
-                            <asp:Button CausesValidation="false"  ID="Button1" CssClass="btn btn_red login_btn_asp" runat="server" Text="Login" OnClick="Button1_Click" ></asp:Button>
+                            <asp:Button UseSubmitBehavior="false" OnClientClick="return false;" OnClick="Button1_Click" CausesValidation="false"  ID="Button1" CssClass="btn btn_red login_btn_asp" runat="server" Text="Login"  ></asp:Button>
                             
 						</div>
                         

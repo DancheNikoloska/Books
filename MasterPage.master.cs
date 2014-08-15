@@ -35,7 +35,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
         
         //connection to database
-        
+      
         SqlConnection konekcija = new SqlConnection();
         konekcija.ConnectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
         string sql = "SELECT * FROM USERS WHERE email='"+ email.Text.ToString()+"' and password='"+ password.Text.ToString() + "'";
@@ -54,6 +54,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
                    
                     Session["username"] = reader["name"] + " " + reader["surname"];
                     Response.Redirect("Default.aspx", false);
+                    
                     break;
                 }
             }
@@ -61,6 +62,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
         }
         catch { }
         finally { konekcija.Close(); }
+        
         
     }
     protected void Button2_Click(object sender, EventArgs e)
