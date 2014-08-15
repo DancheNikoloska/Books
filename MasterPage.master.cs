@@ -25,11 +25,12 @@ public partial class MasterPage : System.Web.UI.MasterPage
         }
         else {
             //if user has remember me
-            if (Response.Cookies["userInfo"].HasKeys)
+            HttpCookie cookie= Request.Cookies["userInfo"];
+            if (cookie!=null)
             {
 
                 login.Visible = false;
-                logged.InnerHtml = ("<span>                      Најавени сте како: " + Response.Cookies["userInfo"]["name"].ToString() + " " + Response.Cookies["userInfo"]["surname"].ToString() + "<a href=\"Logout.aspx\" > (Одјава)</a></span>");
+                logged.InnerHtml = ("<span>                      Најавени сте како: " + cookie.Value.ToString() + "<a href=\"Logout.aspx\" > (Одјава)</a></span>");
                 logged.Visible = true;
 
 
@@ -42,8 +43,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
             }
             
-            login.Visible = true;
-            logged.Visible = false;
+            
             
         }
        
@@ -71,21 +71,26 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
                     valid = true;
                     Session["username"] = reader["name"] + " " + reader["surname"];
-                    Response.Redirect("Default.aspx", false);
 
+
+                    Response.Redirect("Default.aspx", false);
                     //check if remember me is enambled
-                     if (remember.Checked) {
+                    if (remember.Checked == true)
+                    {
                         HttpCookie cookie = new HttpCookie("userInfo");
-                        cookie["username"] = reader["name"].ToString();
-                        cookie["surname"] = reader["surname"].ToString();
-                        cookie["id"] = reader["id"].ToString();
-                        cookie["email"] = reader["email"].ToString();
-                        cookie.Expires = DateTime.Now.AddDays(30);
-                        Response.Cookies.Add(cookie);
+                        cookie.Value = (reader["name"].ToString() + " " + reader["surname"].ToString());
                         
-                     }
+                        cookie.Expires = DateTime.Now.AddDays(15);
+                        Response.Cookies.Add(cookie);
+
+                    }
+
+                    
+
                     
                     break;
+                    
+                   
                 }
             }
           
