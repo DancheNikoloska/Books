@@ -24,11 +24,29 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
         }
         else {
+            //if user has remember me
+            if (Response.Cookies["userInfo"].HasKeys)
+            {
+
+                login.Visible = false;
+                logged.InnerHtml = ("<span>                      Најавени сте како: " + Response.Cookies["userInfo"]["name"].ToString() + " " + Response.Cookies["userInfo"]["surname"].ToString() + "<a href=\"Logout.aspx\" > (Одјава)</a></span>");
+                logged.Visible = true;
+
+
+            }
+            else
+            {
+
+                login.Visible = true;
+                logged.Visible = false;
+
+            }
             
             login.Visible = true;
             logged.Visible = false;
             
         }
+       
         
     }
     protected void Button1_Click(object sender, EventArgs e)
@@ -54,6 +72,18 @@ public partial class MasterPage : System.Web.UI.MasterPage
                     valid = true;
                     Session["username"] = reader["name"] + " " + reader["surname"];
                     Response.Redirect("Default.aspx", false);
+
+                    //check if remember me is enambled
+                     if (remember.Checked) {
+                        HttpCookie cookie = new HttpCookie("userInfo");
+                        cookie["username"] = reader["name"].ToString();
+                        cookie["surname"] = reader["surname"].ToString();
+                        cookie["id"] = reader["id"].ToString();
+                        cookie["email"] = reader["email"].ToString();
+                        cookie.Expires = DateTime.Now.AddDays(30);
+                        Response.Cookies.Add(cookie);
+                        
+                     }
                     
                     break;
                 }
@@ -65,6 +95,10 @@ public partial class MasterPage : System.Web.UI.MasterPage
         if (!valid) {
             Response.Write("<p style=\"margin-left: 37%;background: white;width: 260px;height: 20px; border-left: 2px solid #7A1900; border-bottom: 2px solid #7A1900; border-right: 2px solid #7A1900;font-weight: bold; color:#B94629;\">Невалидна емаил адреса или лозинка.</p>");
         }
+
+        
+
+       
         
     }
     protected void Button2_Click(object sender, EventArgs e)

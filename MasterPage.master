@@ -37,15 +37,19 @@
 			<!-- Social Login -->
 			<div class="social_login">
 				<div class="">
-					<a href="#" class="social_box fb">
+					<a href="https://www.facebook.com/" class="social_box fb">
+                        
 						<span class="icon"><i class="fa fa-facebook"></i></span>
 						<span class="icon_title">Конектирајте се со Facebook</span>
+                        
 						
 					</a>
 
-					<a href="#" class="social_box google">
+					<a href="https://plus.google.com/" class="social_box google">
+                        
 						<span class="icon"><i class="fa fa-google-plus"></i></span>
 						<span class="icon_title">Конектирајте се со Google</span>
+                        
 					</a>
 				</div>
 
@@ -72,7 +76,7 @@
 					<br />
 
 					<div class="checkbox">
-						<input id="remember" type="checkbox" />
+						<input runat="server" id="remember" type="checkbox" />
 						<label for="remember">Запамети ме на овој компјутер</label>
 					</div>
 
