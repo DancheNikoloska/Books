@@ -279,6 +279,9 @@ img {
 	border: 2px solid #7A1900;
     
 }
+.templatemo_product_box {
+margin: 4px;
+}
 
 #templatemo_content_right h1 {
 	padding: 10px;
