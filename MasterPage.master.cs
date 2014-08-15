@@ -35,7 +35,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
         
         //connection to database
-      
+        
         SqlConnection konekcija = new SqlConnection();
         konekcija.ConnectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
         string sql = "SELECT * FROM USERS WHERE email='"+ email.Text.ToString()+"' and password='"+ password.Text.ToString() + "'";
