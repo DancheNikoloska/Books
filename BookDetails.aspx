@@ -56,6 +56,7 @@
                 <p>Жанр: <span>Психолошка</span></p>
                 <p>Број на страни: <span> 480</span></p>
                 <p>Цена: <span> 450ден</span></p>
+                <p>Поени: <span> 3</span></p>
                <button><a href="#">Избери</a></button>
             </div>
             <div id="bookDesc">

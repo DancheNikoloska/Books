@@ -262,7 +262,7 @@ img {
     color:black;
     margin-left:10px;
     padding-left:10px;
-    padding-top:20px;
+    padding-top:10px;
     }
 #templatemo_content #bookDetails a {
 	color:white;
@@ -271,7 +271,7 @@ img {
 	
     width:106px;
     height:28px;
-    margin-top:30px;
+    margin-top:20px;
     margin-left:18px;
     background: url('images/header-bg.jpg');
     text-align:center;
