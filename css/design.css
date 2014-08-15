@@ -284,10 +284,10 @@ img {
 margin: 4px;
 }
 
-#templatemo_content_right h1 {
+#templatemo_content_right h1  {
 	padding: 10px;
 	margin: 0 0 20px 0;
-	font-size: 15px;
+	font-size: 12px;
 	color: white;
 	background: url('images/header-bg.jpg') repeat-x;
 }
@@ -330,6 +330,9 @@ margin: 4px;
 
 .templatemo_product_box h1 span {
 	font-weight: normal;
+}
+.templatemo_product_box a {
+	background: url('images/header-bg.jpg');
 }
 
 .templatemo_product_box img {

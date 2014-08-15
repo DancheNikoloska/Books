@@ -26,44 +26,44 @@ public partial class _Default : System.Web.UI.Page
                 if (i == 1)
                 {
                     string d = Regex.Match(reader["description"].ToString(), @"^(\w+\b.*?){12}").ToString();
-                    box1.InnerHtml = "<h1>" + reader["title"] + "</h1>" +
+                    box1.InnerHtml = "<h1>" + reader["title"] + " - " + reader["author"] + "</h1>" +
                    "<img src=css/images/" + reader["image"] + " alt=image   />" +
                    "<div class=product_info>" +
                    "<p>" + d + " ..." + "</p>" +
                    " <h3>" + reader["price"] + " ден." + "</h3>" +
-                   "<div class=detail_button><a href=subpage.html>Детали</a></div></div>";
+                   "<div class=detail_button><a href=subpage.html>Повеќе</a></div></div>";
                 }
                 if (i == 2) 
                 {
                     string d = Regex.Match(reader["description"].ToString(), @"^(\w+\b.*?){12}").ToString();
-                    box2.InnerHtml = "<h1>" + reader["title"] + "</h1>" +
+                    box2.InnerHtml = "<h1>" + reader["title"] + " - " +reader["author"]+ "</h1>" +
                    "<img src=css/images/" + reader["image"] + " alt=image   />" +
                    "<div class=product_info>" +
                    "<p>" + d +" ..."+ "</p>" +
                    " <h3>"+reader["price"]+" ден."+"</h3>" +
-                   "<div class=detail_button><a href=subpage.html>Детали</a></div></div>"; 
+                   "<div class=detail_button><a href=subpage.html>Повеќе</a></div></div>"; 
                 }
 
                 if (i == 3) 
                 {
                     string d = Regex.Match(reader["description"].ToString(), @"^(\w+\b.*?){12}").ToString();
-                    box3.InnerHtml = "<h1>" + reader["title"] + "</h1>" +
+                    box3.InnerHtml = "<h1>" + reader["title"] + " - " + reader["author"] + "</h1>" +
                    "<img src=css/images/" + reader["image"] + " alt=image   />" +
                    "<div class=product_info>" +
                    "<p>" + d + " ..." + "</p>" +
                    " <h3>" + reader["price"] + " ден." + "</h3>" +
-                   "<div class=detail_button><a href=subpage.html>Детали</a></div></div>";
+                   "<div class=detail_button><a href=subpage.html>Повеќе</a></div></div>";
                 }
 
                 if (i == 4) 
                 {
                     string d = Regex.Match(reader["description"].ToString(), @"^(\w+\b.*?){12}").ToString();
-                    box4.InnerHtml = "<h1>" + reader["title"] + "</h1>" +
+                    box4.InnerHtml = "<h1>" + reader["title"] +" - " +reader["author"]+ "</h1>" +
                    "<img src=css/images/" + reader["image"] + " alt=image   />" +
                    "<div class=product_info>" +
                    "<p>" + d.ToString() + " ..." + "</p>" +
                    " <h3>" + reader["price"] + " ден." + "</h3>" +
-                   "<div class=detail_button><a href=subpage.html>Детали</a></div></div>";
+                   "<div class=detail_button><a href=subpage.html>Повеќе</a></div></div>";
                 }
                 i++;
                 
