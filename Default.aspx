@@ -14,32 +14,35 @@
     	
         <div id="templatemo_content_left" >
         	<div class="templatemo_content_left_section" >
-            	<h1>Categories</h1>
+            	<h1>Избери жанр</h1>
                 <ul>
-                    <li ><a href="subpage.html"  >Donec accumsan urna</a></li>
-                    <li ><a href="subpage.html"  >Proin vulputate justo</a></li>
-                    <li ><a href="#">In sed risus ac feli</a></li>
-                    <li ><a href="#" >Aliquam tristique dolor</a></li>
-                    <li ><a href="#" >Maece nas metus</a></li>
-                    <li ><a href="#" >Sed pellentesque placerat</a></li>
-                    <li ><a href="#" >Suspen disse</a></li>
-                    <li ><a href="#" >Maece nas metus</a></li>
-                    <li ><a href="#" >In sed risus ac feli</a></li>
+                    
+                    <li ><a href="#"> Авантуристички</a></li>
+                    <li ><a href="#"> Автобиографски</a></li>
+                    <li ><a href="#"> Акциони</a></li>
+                    <li ><a href="#" >Бизнис</a></li>
+                    <li ><a href="#"> Биографски</a></li>
+                    <li ><a href="#" >Драма</a></li>
+                    <li ><a href="#" >Едукативни</a></li>
+                    <li ><a href="#" >Историски</a></li>
+                    <li ><a href="#" >Класици</a></li>
+                    <li ><a href="#" >Криминалистички</a></li>
+                    <li ><a href="#" >Мистерија</a></li>
+                    <li ><a href="#" >Поезија</a></li>
+                    <li ><a href="#" >Политика</a></li>
+                    <li ><a href="#" >Психолошки</a></li>
+                    <li ><a href="#" >Религија</a></li>
+                    <li ><a href="#" >Романса</a></li>
+                    <li ><a href="#"> Трилер</a></li>
+                    <li ><a href="#" >Фантастика</a></li>
+                    <li ><a href="#" >Филозофија</a></li>
+                    
             	</ul>
             </div>
 			<div class="templatemo_content_left_section" >
             	<h1 >Bestsellers</h1>
                 <ul >
-                    <li ><a href="#" >Vestibulum ullamcorper</a></li>
-                    <li ><a href="#" >Maece nas metus</a></li>
-                    <li ><a href="#">In sed risus ac feli</a></li>
-                    <li ><a href="#" >Praesent mattis varius</a></li>
-                    <li ><a href="#" >Maece nas metus</a></li>
-                    <li ><a href="#" >In sed risus ac feli</a></li>
-                    <li><a href="http://www.flashmo.com" target="_parent" >Flash Templates</a></li>
-                    <li ><a href="http://www.templatemo.com" target="_parent" >CSS Templates</a></li>
-                    <li><a href="http://www.webdesignmo.com" target="_parent" >Web Design</a></li>
-                    <li ><a href="http://www.photovaco.com" target="_parent" >Free Photos</a></li>
+                   
             	</ul>
             </div>
             
