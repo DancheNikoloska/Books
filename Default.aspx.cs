@@ -25,7 +25,7 @@ public partial class _Default : System.Web.UI.Page
             {
                 if (i == 1)
                 {
-                    string d = Regex.Match(reader["description"].ToString(), @"^(\w+\b.*?){12}").ToString();
+                    string d = Regex.Match(reader["description"].ToString(), @"^(\w+\b.*?){13}").ToString();
                     box1.InnerHtml = "<h1>" + reader["title"] + " - " + reader["author"] + "</h1>" +
                    "<img src=css/images/" + reader["image"] + " alt=image   />" +
                    "<div class=product_info>" +
@@ -35,7 +35,7 @@ public partial class _Default : System.Web.UI.Page
                 }
                 if (i == 2) 
                 {
-                    string d = Regex.Match(reader["description"].ToString(), @"^(\w+\b.*?){12}").ToString();
+                    string d = Regex.Match(reader["description"].ToString(), @"^(\w+\b.*?){13}").ToString();
                     box2.InnerHtml = "<h1>" + reader["title"] + " - " +reader["author"]+ "</h1>" +
                    "<img src=css/images/" + reader["image"] + " alt=image   />" +
                    "<div class=product_info>" +
