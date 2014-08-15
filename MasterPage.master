@@ -90,7 +90,7 @@
 					</div>
 				</div>
 
-				<a href="#" style="color: #7A1900;" class="forgot_password" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='#7A1900'">Forgot password?</a>
+				<a href="#" style="color: #7A1900;" class="forgot_password" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='#7A1900'">Ја заборавивте лозинката?</a>
 			</div>
 
 			<!-- Register Form -->
