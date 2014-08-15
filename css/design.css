@@ -331,6 +331,9 @@ margin: 4px;
 .templatemo_product_box h1 span {
 	font-weight: normal;
 }
+.templatemo_product_box a {
+	background: url('images/header-bg.jpg');
+}
 
 .templatemo_product_box img {
 	float: left;
