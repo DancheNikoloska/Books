@@ -20,12 +20,14 @@
 	left:45%;
 	top:80px;
 	background: #FFF;
+   
 }
 
 #modal_trigger {margin: 0 0 0 175px; width:100px; display:inline;
     height: 15px; 
     background: white;
     color: #7A1900;
+   
 }
 
 .btn {padding:10px 20px; background: #EBE2C3;}
@@ -84,7 +86,7 @@ a.btn_red {color: #FFF;}
 
 
 /* User Register Form */
-.user_register {display: none; color: #7A1900}
+.user_register {display: none; color: #7A1900; }
 .user_register label {display: block; margin-bottom:5px;}
 .user_register input[type="text"], .user_register input[type="email"], .user_register input[type="password"] {display: block; width:90%; padding: 10px; border:1px solid #DDD; color:#7A1900;}
 .user_register input[type="checkbox"] {float:left; margin-right:5px;}
