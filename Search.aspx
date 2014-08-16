@@ -2,73 +2,74 @@
 
 <asp:Content ContentPlaceHolderID="Content1" Height="800px" runat="server">
  
-    <asp:ListView Margin="10px" ID="ListView1" runat="server" DataSourceID="BooksData" DataKeyNames="book_id">
-        <AlternatingItemTemplate>
+    <asp:ListView Margin="10px" ID="ListView1" runat="server" DataSourceID="BooksData" DataKeyNames="book_id" GroupItemCount="5">
 
-        <br />  
-            <a href="#" style="width: 400px;">
-            <div style="background: #E3DEC1;color: red; color: black; margin: auto; border: 2px solid #7A1900; width: 400px;">
-               
-               
-               <asp:Image CssClass="search_images" ImageUrl='<%# "css/images/"+Eval("image") %>' ID="Image1" runat="server" />
-                <span class="search_text">
-                    
-                <asp:Label Margin="15px" Text='<%# "Title: "+Eval("title") %>' runat="server" ID="titleLabel" /><br />
-               
-                
-                <asp:Label Margin="15px" Text='<%# "Author: "+Eval("author") %>' runat="server" ID="authorLabel" /><br />
-                
-                <asp:Label  Margin="15px" Text='<%# "Genre: "+Eval("genre") %>' runat="server" ID="genreLabel" /><br />
-                  
-               </span>
-                
-            </div>
 
-          </a>
 
-        <br />  
+       
+        <EmptyDataTemplate>
+            <table runat="server" style="">
+                <tr>
+                    <td>No data was returned.</td>
+                </tr>
+            </table>
+        </EmptyDataTemplate>
+        <EmptyItemTemplate>
+            <td runat="server" />
+        </EmptyItemTemplate>
+        <GroupTemplate>
+            <tr runat="server" id="itemPlaceholderContainer">
+                <td runat="server" id="itemPlaceholder"></td>
+            </tr>
+        </GroupTemplate>
 
-        </AlternatingItemTemplate>
-        
+       
         <ItemTemplate>
-          <br />  
-          <a href="#" style="width: 400px; margin-top: 50px;">
-            <div style="background: #404040; color: black; margin: auto; border: 2px solid black; width: 400px;">
-               
-               
-               <asp:Image CssClass="search_images" ImageUrl='<%# "css/images/"+Eval("image") %>' ID="Image1" runat="server" />
-                <span class="search_text">
-                    
-                <asp:Label Margin="15px" Text='<%# "Title: "+Eval("title") %>' runat="server" ID="titleLabel" /><br />
-               
-                
-                <asp:Label Margin="15px" Text='<%# "Author: "+Eval("author") %>' runat="server" ID="authorLabel" /><br />
-                
-                <asp:Label  Margin="15px" Text='<%# "Genre: "+Eval("genre") %>' runat="server" ID="genreLabel" /><br />
-                    
-               </span>
-                
-            </div>
+            <td runat="server" >
+                <br />
+            <a href='<%# "Copies.aspx?id="+Eval("book_id") %>' runat="server" >
+                <asp:Image BorderColor="#7A1900" BorderWidth="2" CssClass="search_image"  ImageUrl='<%# "css/images/"+Eval("image") %>' ID="Image1" runat="server" />
+                    <span class="search_content" >
 
-          </a>
-           <br />   
+                        <asp:Label  Text='<%#"<h3>"+Eval("title")+"</h3>" %>' runat="server" ID="titleLabel" />
+                        
+
+                        
+
+                    </span>
+             </a>
+            </td>
+
+
+
         </ItemTemplate>
         <LayoutTemplate>
-            <div runat="server" id="itemPlaceholderContainer" style="font-family: Verdana, Arial, Helvetica, sans-serif;"><span runat="server" id="itemPlaceholder" /></div>
-            <div style="text-align: center; background: url('css/images/bg.jpg') repeat; font-family: Verdana, Arial, Helvetica, sans-serif; color: #FFFFFF;">
-                <asp:DataPager PageSize="3" runat="server" ID="DataPager2">
-                    <Fields>
-                        <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="False"></asp:NextPreviousPagerField>
-                        <asp:NumericPagerField></asp:NumericPagerField>
-                        <asp:NextPreviousPagerField ButtonType="Button" ShowLastPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="False"></asp:NextPreviousPagerField>
-                    </Fields>
-                </asp:DataPager>
+            <table  runat="server" >
+                <tr runat="server" >
+                    <td runat="server" >
+                        <table cellspacing="5" runat="server" id="groupPlaceholderContainer"  border="0" style="margin: 35px;" >
+                            <tr  runat="server" id="groupPlaceholder" ></tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr runat="server">
+                    <td runat="server" style="">
+                        <asp:DataPager CssClass="pager" runat="server" PageSize="20" ID="DataPager2"  >
+                            <Fields  >
+                                <asp:NextPreviousPagerField LastPageImageUrl="~/css/images/header-bg.jpg"  ButtonCssClass="search_button" ButtonType="Button" ShowFirstPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="False"></asp:NextPreviousPagerField>
+                                <asp:NumericPagerField NumericButtonCssClass="search_numeric"></asp:NumericPagerField>
+                                <asp:NextPreviousPagerField FirstPageImageUrl="~/css/images/header-bg.jpg" ButtonCssClass="btn1" ButtonType="Button" ShowLastPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="False"></asp:NextPreviousPagerField>
+                            </Fields>
+                        </asp:DataPager>
+                    </td>
+                </tr>
+            </table>
 
-            </div>
 
 
         </LayoutTemplate>
-        
+
+      
     </asp:ListView>
     <asp:SqlDataSource runat="server" ID="BooksData" ConnectionString='<%$ ConnectionStrings:BooksConnectionString %>' SelectCommand="SELECT * FROM [BOOKS]"></asp:SqlDataSource>
 
