@@ -114,16 +114,16 @@ public partial class MasterPage : System.Web.UI.MasterPage
         string name = TextBox1.Text.ToString();
         string surname = TextBox2.Text.ToString();
         string email = TextBox3.Text.ToString();
-        string address=null;
+        string phone=null;
         if(TextBox4.Text!=null)
-         address = TextBox4.Text.ToString();
+        phone = TextBox4.Text.ToString();
         string password = TextBox6.Text.ToString();
         
          
         //database connection
         SqlConnection konekcija = new SqlConnection();
         konekcija.ConnectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
-        string sql = "INSERT INTO USERS VALUES('"+name+"','"+surname+"','"+email+"','"+address+"','"+password+"',"+0+")";
+        string sql = "INSERT INTO USERS VALUES('"+name+"','"+surname+"','"+email+"','"+phone+"','"+password+"')";
         SqlCommand komanda = new SqlCommand(sql, konekcija);
         try
         {

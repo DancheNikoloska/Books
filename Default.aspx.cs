@@ -14,7 +14,7 @@ public partial class _Default : System.Web.UI.Page
     {
         SqlConnection konekcija = new SqlConnection();
         konekcija.ConnectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
-        string sql = "select * from BOOKS order by date_received desc";
+        string sql = "SELECT * from BOOKS order by book_id desc";
         SqlCommand komanda = new SqlCommand(sql, konekcija);
         try 
         {
@@ -31,7 +31,7 @@ public partial class _Default : System.Web.UI.Page
                    "<div class=product_info>" +
                    "<p>" + d + " ..." + "</p>" +
                    " <h3>" + reader["price"] + " ден." + "</h3>" +
-                   "<div class=detail_button><a href=BookDetails.aspx?id="+reader["copy_id"]+">Повеќе</a></div></div>";
+                   "<div class=detail_button><a href=BookDetails.aspx?id="+reader["book_id"]+">Повеќе</a></div></div>";
                 }
                 if (i == 2) 
                 {
@@ -41,7 +41,7 @@ public partial class _Default : System.Web.UI.Page
                    "<div class=product_info>" +
                    "<p>" + d +" ..."+ "</p>" +
                    " <h3>"+reader["price"]+" ден."+"</h3>" +
-                   "<div class=detail_button><a href=BookDetails.aspx?id=" + reader["copy_id"] + ">Повеќе</a></div></div>"; 
+                   "<div class=detail_button><a href=BookDetails.aspx?id=" + reader["book_id"] + ">Повеќе</a></div></div>"; 
                 }
 
                 if (i == 3) 
@@ -52,7 +52,7 @@ public partial class _Default : System.Web.UI.Page
                    "<div class=product_info>" +
                    "<p>" + d + " ..." + "</p>" +
                    " <h3>" + reader["price"] + " ден." + "</h3>" +
-                   "<div class=detail_button><a href=BookDetails.aspx?id=" + reader["copy_id"] + ">Повеќе</a></div></div>";
+                   "<div class=detail_button><a href=BookDetails.aspx?id=" + reader["book_id"] + ">Повеќе</a></div></div>";
                 }
 
                 if (i == 4) 
@@ -63,7 +63,7 @@ public partial class _Default : System.Web.UI.Page
                    "<div class=product_info>" +
                    "<p>" + d.ToString() + " ..." + "</p>" +
                    " <h3>" + reader["price"] + " ден." + "</h3>" +
-                   "<div class=detail_button><a href=BookDetails.aspx?id=" + reader["copy_id"] + ">Повеќе</a></div></div>";
+                   "<div class=detail_button><a href=BookDetails.aspx?id=" + reader["book_id"] + ">Повеќе</a></div></div>";
                 }
                 i++;
                 
