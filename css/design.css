@@ -448,19 +448,31 @@ margin: 4px;
 
 /* search page */
 
-.search_image {
-    float: left;
-	margin-right: 20px;
-    margin-bottom:25px;
-    margin-top:20px;
-    margin-left: 10px;
-   
+.search_content {
+ color: black;
+ clear:both;
+ display:block;
+ text-align: center;
+ margin-left: 20px;
 }
-.search_text {
-display: inline;
-width: 230px;
-float: right;
-margin: 10px;
-margin-top: 38px;
-color: #EBE2C3;
+.search_image {
+ margin-left: 40px;
+ 
+}
+.search_button {
+
+ color: black;
+ margin-left: 45%;
+}
+
+.seach_numeric {
+ color: #7A1900;
+ text-decoration: none;
+}
+.search_numeric :hover {
+ color: black;
+ 
+}
+.pager {
+ background-color: red;
 }
