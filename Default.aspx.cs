@@ -14,7 +14,7 @@ public partial class _Default : System.Web.UI.Page
     {
         SqlConnection konekcija = new SqlConnection();
         konekcija.ConnectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
-        string sql = "select * from BOOKS, COPIES where BOOKS.book_id=COPIES.book_id order by date_received desc";
+        string sql = "select * from BOOKS order by date_received desc";
         SqlCommand komanda = new SqlCommand(sql, konekcija);
         try 
         {

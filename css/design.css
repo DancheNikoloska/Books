@@ -235,6 +235,16 @@ img {
 	float: right;
 	width: 670px;
 }
+#templatemo_content .bookDetails .Comments h3 {
+	float: right;
+	width: 670px;
+    padding-top:15px;
+    padding-left:10px;
+    margin-left:10px;
+    
+    
+}
+
 #templatemo_content .bookDetails h1 {
 	font-size:22px;
     color:#E62E00;

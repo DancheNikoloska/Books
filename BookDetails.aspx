@@ -54,6 +54,7 @@
             </div>
             <div  class="bookDesc" id="bDesc" runat="server">
          </div>
+            <div class="Comments" id="Comm" runat="server"></div>
           
         </div>
           <!-- end of content right -->

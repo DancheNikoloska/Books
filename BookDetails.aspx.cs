@@ -18,7 +18,7 @@ public partial class BookDetails : System.Web.UI.Page
         string id=Request.QueryString["id"];
         SqlConnection konekcija = new SqlConnection();
         konekcija.ConnectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
-        string sql = "select * from BOOKS, COPIES WHERE BOOKS.book_id=COPIES.book_id and copy_id="+id;
+        string sql = "select * from BOOKS WHERE book_id="+id;
         SqlCommand komanda = new SqlCommand(sql, konekcija);
         try
         {
@@ -37,6 +37,7 @@ public partial class BookDetails : System.Web.UI.Page
               " <button><a href=#>Избери</a></button>";
 
                 bDesc.InnerHtml = " <h5>&nbsp&nbsp&nbsp&nbsp&nbsp"+reader["description"]+" </h5>";
+                Comm.InnerHtml = "<h3>komentariiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</h3>";
             }
 
         }
