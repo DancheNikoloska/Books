@@ -14,13 +14,13 @@ public partial class _Default : System.Web.UI.Page
     {
         SqlConnection konekcija = new SqlConnection();
         konekcija.ConnectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
-        string sql = "SELECT * from BOOKS order by book_id desc";
+        string sql = "select * from BOOKS ORDER BY date_received ASC";
         SqlCommand komanda = new SqlCommand(sql, konekcija);
-        try 
+        try
         {
             konekcija.Open();
             SqlDataReader reader = komanda.ExecuteReader();
-            int i=1;
+            int i = 1;
             while (reader.Read())
             {
                 if (i == 1)
@@ -31,20 +31,20 @@ public partial class _Default : System.Web.UI.Page
                    "<div class=product_info>" +
                    "<p>" + d + " ..." + "</p>" +
                    " <h3>" + reader["price"] + " ден." + "</h3>" +
-                   "<div class=detail_button><a href=BookDetails.aspx?id="+reader["book_id"]+">Повеќе</a></div></div>";
+                   "<div class=detail_button><a href=BookDetails.aspx?id=" + reader["book_id"] + ">Повеќе</a></div></div>";
                 }
-                if (i == 2) 
+                if (i == 2)
                 {
                     string d = Regex.Match(reader["description"].ToString(), @"^(\w+\b.*?){13}").ToString();
-                    box2.InnerHtml = "<h1>" + reader["title"] + " - " +reader["author"]+ "</h1>" +
+                    box2.InnerHtml = "<h1>" + reader["title"] + " - " + reader["author"] + "</h1>" +
                    "<img src=css/images/" + reader["image"] + " alt=image   />" +
                    "<div class=product_info>" +
-                   "<p>" + d +" ..."+ "</p>" +
-                   " <h3>"+reader["price"]+" ден."+"</h3>" +
-                   "<div class=detail_button><a href=BookDetails.aspx?id=" + reader["book_id"] + ">Повеќе</a></div></div>"; 
+                   "<p>" + d + " ..." + "</p>" +
+                   " <h3>" + reader["price"] + " ден." + "</h3>" +
+                   "<div class=detail_button><a href=BookDetails.aspx?id=" + reader["book_id"] + ">Повеќе</a></div></div>";
                 }
 
-                if (i == 3) 
+                if (i == 3)
                 {
                     string d = Regex.Match(reader["description"].ToString(), @"^(\w+\b.*?){12}").ToString();
                     box3.InnerHtml = "<h1>" + reader["title"] + " - " + reader["author"] + "</h1>" +
@@ -55,10 +55,10 @@ public partial class _Default : System.Web.UI.Page
                    "<div class=detail_button><a href=BookDetails.aspx?id=" + reader["book_id"] + ">Повеќе</a></div></div>";
                 }
 
-                if (i == 4) 
+                if (i == 4)
                 {
                     string d = Regex.Match(reader["description"].ToString(), @"^(\w+\b.*?){12}").ToString();
-                    box4.InnerHtml = "<h1>" + reader["title"] +" - " +reader["author"]+ "</h1>" +
+                    box4.InnerHtml = "<h1>" + reader["title"] + " - " + reader["author"] + "</h1>" +
                    "<img src=css/images/" + reader["image"] + " alt=image   />" +
                    "<div class=product_info>" +
                    "<p>" + d.ToString() + " ..." + "</p>" +
@@ -66,7 +66,7 @@ public partial class _Default : System.Web.UI.Page
                    "<div class=detail_button><a href=BookDetails.aspx?id=" + reader["book_id"] + ">Повеќе</a></div></div>";
                 }
                 i++;
-                
+               
             }
 
         }
