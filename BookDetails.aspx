@@ -46,33 +46,17 @@
             </div>
             
         </div> <!-- end of content left -->
+        <!--content right-->
         
-        <div  id="bookDetails" >
-        	<img src="css/images/emotionalIntelligence.jpg" />
-            <div id="bookTitle">
-                  <h1>Emotional Intelligence</h1>
-                <h3>by Daniel Goleman</h3>
-                <h4>Детали:</h4>
-                <p>Жанр: <span>Психолошка</span></p>
-                <p>Број на страни: <span> 480</span></p>
-                <p>Цена: <span> 450ден</span></p>
-                <p>Поени: <span> 3</span></p>
-               <button><a href="#">Избери</a></button>
+        <div  class="bookDetails" >
+        	
+            <div class="bookTitle" id="bTitle" runat="server" >                         
             </div>
-            <div id="bookDesc">
-
-                <h5>&nbsp&nbsp&nbsp&nbsp&nbsp Everyone knows that high IQ is no guarantee of success, 
-                    happiness, or virtue, but until Emotional Intelligence, 
-                    we could only guess why. Daniel Golemans brilliant report 
-                    from the frontiers of psychology and neuroscience offers startling new 
-                    insight into our "two minds"--the rational and the emotional--and how
-                    they together shape our destiny. 
-                </h5>
-
+            <div class="bookDesc" id="bDesc" runat="server">
             </div>
           
-           
         </div>
+          <!-- end of content right -->
     	<div class="cleaner_with_height"  >&nbsp;</div>
     </div> <!-- end of content -->
 </asp:Content>

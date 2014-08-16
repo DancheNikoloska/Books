@@ -231,25 +231,25 @@ img {
 	width: 670px;
 }
 
-#templatemo_content #bookDetails {
+#templatemo_content .bookDetails {
 	float: right;
 	width: 670px;
 }
-#templatemo_content #bookDetails h1 {
+#templatemo_content .bookDetails h1 {
 	font-size:22px;
     color:#E62E00;
     margin: 10px;
     padding:10px;
     display:inline;
 }
-#templatemo_content #bookDetails h3 {
+#templatemo_content .bookDetails h3 {
 	font-size:12px;
     color:#E62E00;
     margin-left:10px;
     padding-left:10px;
     
 }
-#templatemo_content #bookDetails p {
+#templatemo_content .bookDetails p {
 	font-size:12px;
     color:black;
     margin-left:10px;
@@ -257,17 +257,17 @@ img {
     padding-top:5px;
     
 }
-#templatemo_content #bookDetails #bookTitle h4 {
+#templatemo_content .bookDetails .bookTitle h4 {
 	font-size:12px;
     color:black;
     margin-left:10px;
     padding-left:10px;
     padding-top:10px;
     }
-#templatemo_content #bookDetails a {
+#templatemo_content .bookDetails a {
 	color:white;
     }
-#templatemo_content #bookDetails button {
+#templatemo_content .bookDetails button {
 	
     width:106px;
     height:28px;
@@ -279,25 +279,25 @@ img {
     font-size:16px;
     padding:0px;
     }
-#bookTitle {
-padding-left:50px;
-margin-left:100px;
+.bookTitle {
+padding-left:10px;
+margin-left:10px;
 }
-#bookDesc {
+.bookDesc {
 width:650px;
 margin-top:15px;
 }
-#templatemo_content #bookDetails h5 {
+#templatemo_content .bookDetails h5 {
 	font-size:12px;
     color:black;
     padding-top:20px;
     }
-#templatemo_content #bookDetails #bookInfo {
+#templatemo_content .bookDetails #bookInfo {
 	float:left;
     width:200px;
     margin-left:200px;
 }
-#templatemo_content #bookDetails img {
+#templatemo_content .bookDetails img {
 	float:left;
     
 }
