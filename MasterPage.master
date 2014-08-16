@@ -15,15 +15,16 @@
 </head>
 
 <body >
+<form runat="server">
 <div id="templatemo_menu" >
     	<ul >
-            <li ><a href="index.html" class="current" >Дома</a></li>
-            <li ><a href="subpage.html" >Книги</a></li>
-            <li ><a href="subpage.html" >За нас</a></li>            
-            <li ><a href="subpage.html" >ЧПП</a></li>  
+            <li ><a href="Default.aspx" class="current" >Дома</a></li>
+            <li ><a href="Search.aspx" >Книги</a></li>
+            <li ><a href="About.aspx" >За нас</a></li>            
+            <li ><a href="FAQs.aspx" >ЧПП</a></li>  
             
     	</ul>
-    <form id="login" runat="server">
+    <div id="login" runat="server">
         <div class="container" >
 	<a id="modal_trigger"  href="#modal" class="btn">Најава/Регистрација</a>
 
@@ -182,10 +183,10 @@
     
     
     
-        </form>
+        </div>
     <div runat="server" id="logged"></div>
     </div> <!-- end of menu -->
-<div id="templatemo_container" runat="server">
+<div id="templatemo_container" style="margin-top: 5px;" runat="server">
 	
     
     
@@ -199,6 +200,7 @@
     <!-- end of footer -->
 <!--  Free CSS Template www.templatemo.com -->
 </div> <!-- end of container -->
+    </form>
 </body>
 </html>
 

@@ -442,3 +442,25 @@ margin: 4px;
 	font-weight: normal;
 }
 /* end of footer */
+
+
+
+
+/* search page */
+
+.search_image {
+    float: left;
+	margin-right: 20px;
+    margin-bottom:25px;
+    margin-top:20px;
+    margin-left: 10px;
+   
+}
+.search_text {
+display: inline;
+width: 230px;
+float: right;
+margin: 10px;
+margin-top: 38px;
+color: #EBE2C3;
+}
