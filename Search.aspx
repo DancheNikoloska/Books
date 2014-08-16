@@ -25,7 +25,7 @@
 
        
         <ItemTemplate>
-            <td runat="server" >
+            <td runat="server" style="width: 200px;">
                 <br />
             <a href='<%# "Copies.aspx?id="+Eval("book_id") %>' runat="server" >
                 <asp:Image BorderColor="#7A1900" BorderWidth="2" CssClass="search_image"  ImageUrl='<%# "css/images/"+Eval("image") %>' ID="Image1" runat="server" />
