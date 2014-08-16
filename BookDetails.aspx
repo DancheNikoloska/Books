@@ -52,8 +52,8 @@
         	
             <div class="bookTitle" id="bTitle" runat="server" >                         
             </div>
-            <div class="bookDesc" id="bDesc" runat="server">
-            </div>
+            <div  class="bookDesc" id="bDesc" runat="server">
+         </div>
           
         </div>
           <!-- end of content right -->
