@@ -162,7 +162,7 @@ img {
     margin-top: auto;
 }
 .addBook h2 {
-    color:#E62E00;
+    color:#7A1900;
     margin:auto;
     padding-top:40px;
     padding-left:35px;
@@ -170,16 +170,39 @@ img {
     }
 .addBook .userData {
 font-size:18px;
-color:black;
 padding-left:33px;
-padding-top:70px;
-    
+padding-top:55px;
+color:#E62E00;
+   
     }
-.addBook .userData span{
 
-padding-top:10px;
-    
-    }
+.tbx  {
+ width:200px;
+ height:22px;
+ border-color:#7A1900;
+
+}
+.table1  {
+display:inline-table;
+
+}
+.table2 {
+display:inline-table;
+padding-left:50px;
+}
+.buttonDodaj {
+width:200px;
+height:30px;
+margin-left:320px;
+background: url('images/header-bg.jpg');
+text-align:center;
+color:white;
+font-size:16px;
+padding:0px;
+margin-top:70px;
+}
+
+
 /* header */
 #templatemo_header {
 	clear: both;
