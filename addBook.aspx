@@ -29,14 +29,7 @@
                          <asp:TextBox ID="opis" CssClass="tbx" runat="server"></asp:TextBox>
                         </asp:TableCell>
                           </asp:TableRow>
-                <asp:TableRow>
-                    <asp:TableCell>
-                     <asp:Label  CssClass="label" ID="Label4" runat="server"  Text="Број на страни:"></asp:Label>
-       </asp:TableCell>
-                    <asp:TableCell>
-                         <asp:TextBox ID="strani" CssClass="tbx" runat="server"></asp:TextBox>
-                         </asp:TableCell>
-                         </asp:TableRow>
+                
      
             
       
@@ -61,20 +54,13 @@
                         </asp:TableRow>
                 <asp:TableRow>
                     <asp:TableCell>
-                    <asp:Label CssClass="label" ID="Label7" runat="server" Text="Датум:"></asp:Label>
+                    <asp:Label CssClass="label" ID="Label7" runat="server" Text="Број на страни:"></asp:Label>
      </asp:TableCell>
                     <asp:TableCell>
-                         <asp:TextBox ID="datum" CssClass="tbx" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="strani" CssClass="tbx" runat="server"></asp:TextBox>
                         </asp:TableCell>
                           </asp:TableRow>
-                <asp:TableRow>
-                    <asp:TableCell>
-                     <asp:Label CssClass="label" ID="Label8" runat="server"  Text="Вашиот е-маил:"></asp:Label>
-       </asp:TableCell>
-                    <asp:TableCell>
-                         <asp:TextBox ID="email"  CssClass="tbx" runat="server"></asp:TextBox>
-                         </asp:TableCell>
-                         </asp:TableRow>
+              
      
             
       

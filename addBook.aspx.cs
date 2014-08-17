@@ -20,7 +20,7 @@ public partial class addBook : System.Web.UI.Page
         konekcija.ConnectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
         try { 
         konekcija.Open();
-         int s = Convert.ToInt32(strani.Text);
+         
          string sql = "INSERT INTO BOOKS(title, author, description, genre, number_of_pages, price, date_received) VALUES('" + naslov.Text.ToString() + "','" + avtor.Text.ToString() + "','" + opis.Text.ToString() + "','" + zanr.Text.ToString() + "','" + strani.Text.ToString() + "','"+cena.Text.ToString()+"',GETDATE())"; ;
         SqlCommand komanda = new SqlCommand(sql, konekcija);
        komanda.ExecuteNonQuery();
