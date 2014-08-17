@@ -18,12 +18,17 @@ public partial class addBook : System.Web.UI.Page
     {
         SqlConnection konekcija = new SqlConnection();
         konekcija.ConnectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
-         konekcija.Open();
+        try { 
+        konekcija.Open();
          int s = Convert.ToInt32(strani.Text);
-         string sql = "";
+         string sql = "INSERT INTO BOOKS VALUES('" + naslov.Text.ToString() + "','" + avtor.Text.ToString() + "','" + opis.Text.ToString() + "','" + zanr.Text.ToString() + "','" + strani.Text.ToString() + "',"+"'bla.jpg','"+cena.Text.ToString()+"',GETDATE(),0,1"+")"; ;
         SqlCommand komanda = new SqlCommand(sql, konekcija);
        komanda.ExecuteNonQuery();
+            }
+        finally {
         konekcija.Close();
+        }
+       
            
       
         
