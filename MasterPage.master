@@ -17,6 +17,21 @@
 <body >
 <form runat="server">
 <div id="templatemo_menu" >
+    <a href="#" id="add_oglas"  class="btn_add" style="border-top: 2px solid #7A1900;
+    border-right: 2px solid #7A1900;
+    padding:10px 20px; 
+    background: white;
+    color: #7A1900;
+    height: 15px; 
+    overflow: visible;
+    display:inline;
+    float: left;
+    text-decoration: none;
+    text-align: center;
+    width: 140px;
+    margin-left: -62px;
+    margin-top: 12px;
+    ">Додади оглас</a>
     	<ul >
             <li ><a href="Default.aspx" class="current" >Дома</a></li>
             <li ><a href="Search.aspx" >Книги</a></li>

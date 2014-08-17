@@ -40,6 +40,21 @@
 .btn {padding:10px 20px; background: #EBE2C3;}
 .btn_red {background: url('images/header-bg.jpg') repeat; color: #FFF;}
 
+.btn_add {
+    border-top: 2px solid #7A1900;
+    border-left: 2px solid #7A1900;
+    padding:10px 20px; 
+    background: white;
+    color: #7A1900;
+    height: 15px; 
+    overflow: visible;
+    display:inline;
+    float: left;
+    text-decoration: none;
+    text-align: center;
+    width: 70px;
+}
+
 .btn:hover {background: #E4E4E2;}
 .btn_red:hover {background: #C12B05;}
 
