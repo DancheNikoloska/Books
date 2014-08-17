@@ -81,7 +81,7 @@
     }
 </style>
 
-            <form class="jotform-form" action="#" method="post" name="form_42283917936364" id="42283917936364" accept-charset="utf-8">
+            <div class="jotform-form"  id="42283917936364" >
                 <input type="hidden" name="formID" value="42283917936364" />
                 <div class="form-all">
                     <ul class="form-section">
@@ -141,7 +141,7 @@
                 <script type="text/javascript">
                     document.getElementById("si" + "mple" + "_spc").value = "42283917936364-42283917936364";
                 </script>
-            </form>
+            </div>
             
          
           

@@ -33,7 +33,7 @@ public partial class BookDetails : System.Web.UI.Page
                 "<p style=\"margin-left: 161px;\">Жанр: <span>" + reader["genre"] + "</span></p>" +
                 "<p style=\"margin-left: 161px;\">Број на страни: <span> " + reader["number_of_pages"] + "</span></p>" +
                 "<p style=\"margin-left: 161px;\">Цена: <span> " + reader["price"] + "ден</span></p>" +
-                "<p style=\"margin-left: 161px;\">Поени: <span> 3</span></p>" +
+                
               " <button style=\"width:300px;\"><a href=\"Contact.aspx?id="+reader["book_id"]+"\">Контактирајте го огласувачот</a></button>";
 
                 bDesc.InnerHtml = " <h5>&nbsp&nbsp&nbsp&nbsp&nbsp"+reader["description"]+" </h5>";
