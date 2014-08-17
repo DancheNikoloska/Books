@@ -88,7 +88,7 @@
                         <li id="cid_5" class="form-input-wide">
                             <div class="form-header-group" style="">
                                 <div style="vertical-align: middle; width: 100%;">
-                                    <h2 id="header_5" class="form-header">Контактирајте го огласувачот преку е-маил
+                                    <h2 id="header_5" class="form-header" style="color:#E62E00">Контактирајте го огласувачот преку е-маил
                                     </h2>
                                 </div>
                             </div>
