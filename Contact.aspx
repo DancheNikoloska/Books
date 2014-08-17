@@ -1,4 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="BookDetails.aspx.cs" Inherits="BookDetails" MasterPageFile="~/MasterPage.master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Contact.aspx.cs" Inherits="Contact" MasterPageFile="~/MasterPage.master" %>
+
+
 
 <asp:Content ContentPlaceHolderID="Content1" runat="server" >
 
@@ -48,12 +50,9 @@
         </div> <!-- end of content left -->
         <!--content right-->
         
-        <div  class="bookDetails" >
-        	
-            <div class="bookTitle" id="bTitle" runat="server" >                         
-            </div>
-            <div  class="bookDesc" id="bDesc" runat="server">
-         </div>
+        <div   >
+  
+            
          
           
         </div>
