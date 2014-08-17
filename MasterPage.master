@@ -31,7 +31,7 @@
     width: 140px;
     margin-left: -62px;
     margin-top: 12px;
-    ">Додади оглас</a>
+    ">Додаj оглас</a>
     	<ul >
             <li ><a href="Default.aspx" class="current" >Дома</a></li>
             <li ><a href="Search.aspx" >Книги</a></li>
