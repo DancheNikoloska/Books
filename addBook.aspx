@@ -10,7 +10,7 @@
                     <asp:Label CssClass="tbx" ID="Label1" runat="server" Text="Наслов:"></asp:Label>
            </asp:TableCell>
                     <asp:TableCell>
-                         <asp:TextBox CssClass="tbx" runat="server"></asp:TextBox>
+                         <asp:TextBox  ID="naslov" CssClass="tbx" ValidationGroup="vs" runat="server"></asp:TextBox>
                         </asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow>
@@ -18,7 +18,7 @@
                  <asp:Label CssClass="label" ID="Label2" runat="server"  Text="Автор:"></asp:Label>
       </asp:TableCell>
                     <asp:TableCell>
-                         <asp:TextBox CssClass="tbx" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="avtor" CssClass="tbx" runat="server"></asp:TextBox>
                         </asp:TableCell>
                         </asp:TableRow>
                 <asp:TableRow>
@@ -26,15 +26,15 @@
                     <asp:Label CssClass="label" ID="Label3" runat="server" Text="Опис:"></asp:Label>
      </asp:TableCell>
                     <asp:TableCell>
-                         <asp:TextBox CssClass="tbx" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="opis" CssClass="tbx" runat="server"></asp:TextBox>
                         </asp:TableCell>
                           </asp:TableRow>
                 <asp:TableRow>
                     <asp:TableCell>
-                     <asp:Label CssClass="label" ID="Label4" runat="server"  Text="Број на страни:"></asp:Label>
+                     <asp:Label  CssClass="label" ID="Label4" runat="server"  Text="Број на страни:"></asp:Label>
        </asp:TableCell>
                     <asp:TableCell>
-                         <asp:TextBox CssClass="tbx" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="strani" CssClass="tbx" runat="server"></asp:TextBox>
                          </asp:TableCell>
                          </asp:TableRow>
      
@@ -48,7 +48,7 @@
                     <asp:Label CssClass="tbx" ID="Label5" runat="server" Text="Жанр:"></asp:Label>
            </asp:TableCell>
                     <asp:TableCell>
-                         <asp:TextBox CssClass="tbx" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="zanr" CssClass="tbx" runat="server"></asp:TextBox>
                         </asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow>
@@ -56,7 +56,7 @@
                  <asp:Label CssClass="label" ID="Label6" runat="server"  Text="Цена:"></asp:Label>
       </asp:TableCell>
                     <asp:TableCell>
-                         <asp:TextBox CssClass="tbx" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="cena" CssClass="tbx" runat="server"></asp:TextBox>
                         </asp:TableCell>
                         </asp:TableRow>
                 <asp:TableRow>
@@ -64,7 +64,7 @@
                     <asp:Label CssClass="label" ID="Label7" runat="server" Text="Датум:"></asp:Label>
      </asp:TableCell>
                     <asp:TableCell>
-                         <asp:TextBox CssClass="tbx" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="datum" CssClass="tbx" runat="server"></asp:TextBox>
                         </asp:TableCell>
                           </asp:TableRow>
                 <asp:TableRow>
@@ -72,16 +72,23 @@
                      <asp:Label CssClass="label" ID="Label8" runat="server"  Text="Вашиот е-маил:"></asp:Label>
        </asp:TableCell>
                     <asp:TableCell>
-                         <asp:TextBox CssClass="tbx" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="email"  CssClass="tbx" runat="server"></asp:TextBox>
                          </asp:TableCell>
                          </asp:TableRow>
      
             
       
         </asp:Table>
-            <button class="buttonDodaj">
-                Додај оглас
-            </button>
+           <div>
+               
+               <asp:Button CssClass="buttonDodaj" OnClick="Button_Click" runat="server" Text="Додај оглас" ValidationGroup="vs"  />
+           </div>
+            <div>
+                
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="naslov" Display="None" ValidationGroup="vs"></asp:RequiredFieldValidator>
+                 <asp:ValidationSummary CssClass="errors" ID="vs" runat="server" DisplayMode="List" HeaderText="Пополнете ги сите полиња!" ValidateRequestMode="Disabled" ValidationGroup="vs" />
+            </div>
             </div>
     </div>
+   
 </asp:Content>

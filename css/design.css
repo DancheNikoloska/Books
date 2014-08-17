@@ -201,7 +201,17 @@ font-size:16px;
 padding:0px;
 margin-top:70px;
 }
-
+.buttonDodaj a {
+color:white;    
+    }
+.errors
+{
+    color:#7A1900;
+    font-size:15px;
+    margin-left:310px;
+    margin-top:10px;
+    
+}
 
 /* header */
 #templatemo_header {
