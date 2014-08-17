@@ -479,3 +479,21 @@ margin: 4px;
 .pager {
  background-color: red;
 }
+
+/* about page */
+
+.about_image {
+ margin-left: 25px;
+}
+.about_content {
+    color: #7A1900;
+    width: 700px;
+    margin: auto;
+    font-size: 17px;
+    padding: 5px;
+     border-left: 1px solid #7A1900;
+}
+    .about_content a {
+     color: #7A1900;
+     
+    }
