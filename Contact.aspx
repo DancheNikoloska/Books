@@ -52,8 +52,7 @@
         
         <div class="bookDetails">
 
-  <script src="http://max.jotfor.ms/static/prototype.forms.js" type="text/javascript"></script>
-<script src="http://max.jotfor.ms/static/jotform.forms.js?3.2.3227" type="text/javascript"></script>
+
 <script type="text/javascript">
     JotForm.init(function () {
         $('input_3').hint('ex: myname@example.com');
@@ -61,7 +60,7 @@
 </script>
 <link href="http://max.jotfor.ms/static/formCss.css?3.2.3227" rel="stylesheet" type="text/css" />
 <link type="text/css" rel="stylesheet" href="http://max.jotfor.ms/css/styles/nova.css?3.2.3227" />
-<link type="text/css" media="print" rel="stylesheet" href="http://max.jotfor.ms/css/printForm.css?3.2.3227" />
+
 <style type="text/css">
     .form-label-left{
         width:150px !important;
@@ -100,7 +99,9 @@
           </span>
                             </label>
                             <div id="cid_1" class="form-input">
-                                <input type="text" class=" form-textbox validate[required]" data-type="input-textbox" id="input_1" name="q1_input1" size="20" value="" />
+                               
+                                <asp:TextBox ValidationGroup="contact" CssClass="form-textbox validate[required]" ID="TextBox1" runat="server"></asp:TextBox><br />
+                                <asp:RequiredFieldValidator ValidationGroup="contact" ForeColor="Red" ControlToValidate="TextBox1" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Името и презимето се задолжителни."></asp:RequiredFieldValidator>
                             </div>
                         </li>
                         <li class="form-line" data-type="control_email" id="id_3">
@@ -110,7 +111,10 @@
           </span>
                             </label>
                             <div id="cid_3" class="form-input">
-                                <input type="email" class=" form-textbox validate[required, Email]" id="input_3" name="q3_input3" size="30" value="" />
+                                
+                                <asp:TextBox ValidationGroup="contact" CssClass="form-textbox validate[required, Email]" ID="TextBox2" runat="server" Width="210"></asp:TextBox><br />
+                                <asp:RequiredFieldValidator ValidationGroup="contact" ForeColor="Red" ControlToValidate="TextBox2" ID="RequiredFieldValidator2" runat="server" ErrorMessage="Емаилот е задолжителен."></asp:RequiredFieldValidator> <br />
+                                <asp:RegularExpressionValidator ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="contact" ForeColor="Red" ControlToValidate="TextBox2" ID="RegularExpressionValidator1" runat="server" ErrorMessage="Емаилот е невалиден."></asp:RegularExpressionValidator>
                             </div>
                         </li>
                         <li class="form-line" data-type="control_textarea" id="id_4">
@@ -120,15 +124,16 @@
           </span>
                             </label>
                             <div id="cid_4" class="form-input">
-                                <textarea id="input_4" class="form-textarea validate[required]" name="q4_input4" cols="40" rows="6"></textarea>
+                                <asp:TextBox ValidationGroup="contact" Height="100" Width="270" ID="input_4" CssClass="form-textarea validate[required]" runat="server" Columns="40" Rows="6"></asp:TextBox>
+                                <br />
+                                <asp:RequiredFieldValidator ValidationGroup="contact" ForeColor="Red" ControlToValidate="input_4" ID="RequiredFieldValidator3" runat="server" ErrorMessage="Ве молиме внесете порака."></asp:RequiredFieldValidator>
                             </div>
                         </li>
-                        <li class="form-line" data-type="control_button" id="id_2">
+                        <li class="form-line"  id="id_2">
                             <div id="cid_2" class="form-input-wide">
                                 <div style="margin-left: 156px" class="form-buttons-wrapper">
-                                    <button id="input_2" type="submit" class="form-submit-button">
-                                        Испрати
-                                    </button>
+                                    
+                                    <asp:Button ValidationGroup="contact" AutoPostBack="true" PostBackUrl="~/Contact.aspx" OnClick="Button1_Click" CssClass="form-submit-button" ID="Button1" runat="server" Text="Испрати" />
                                 </div>
                             </div>
                         </li>
