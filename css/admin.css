@@ -1,0 +1,52 @@
+﻿body{
+			margin-top: 10px;
+			font-family: 'Trebuchet MS', serif;
+			line-height: 1.6;
+            background: url('images/bg.jpg') repeat;
+            
+
+		}
+		.container{
+			width: 800px;
+			margin: 0 auto;
+		}
+
+
+
+		ul.tabs{
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+		}
+		ul.tabs li{
+			background: none;
+			color: #222;
+			display: inline-block;
+			padding: 10px 15px;
+			cursor: pointer;
+		}
+
+		ul.tabs li.current{
+			background: white;
+			color: #222;
+            border-top: 2px solid black;
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+		}
+
+		.tab-content{
+			display: none;
+			background: white;
+			padding: 15px;
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+            border-bottom: 2px solid black;
+		}
+
+		.tab-content.current{
+			display: inherit;
+		}
+
+.users_grid {
+ margin: auto;
+}

@@ -617,3 +617,31 @@ margin: 4px;
      color: #7A1900;
      
     }
+
+
+/* admin page */
+.admin_body {
+ background: url('images/bg.jpg') repeat;
+}
+.table_admin {
+ margin-top: 15%;
+ margin-left: 40%;
+ border: 2px solid #7A1900;
+ 
+}
+.header_admin{
+ border-bottom: 1px solid gray;
+}
+.buttonAdmin {
+ width:150px;
+ height:30px;
+ margin-left: 19px;
+ background: url('images/header-bg.jpg');
+ text-align:center;
+ color:white;
+ font-size:16px;
+ padding:0px;
+
+}
+
+
