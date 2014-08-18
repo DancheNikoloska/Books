@@ -219,7 +219,7 @@ color:white;
 .cpp {
     clear: both;
 	width: 940px;
-	height: 500px;
+	height: 900px;
     padding-top:5px;
 	
  }
@@ -244,12 +244,12 @@ width:70px;
 height:100px;
 display:inline;
 }
-    .cpp h3 {
-    color:#7A1900;
-    font-size:14px;
-    padding-top:10px;
-    margin-left:120px;
-    width:700px;
+.cpp h3 {
+color:blue;
+font-size:14px;
+padding-top:10px;
+margin-left:120px;
+width:700px;
     
     }
 .f {
