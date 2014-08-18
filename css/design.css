@@ -150,6 +150,7 @@ img {
  }
 
 /* end of menu*/
+/* addBook page*/
 
 .addBook {
 	clear: both;
@@ -212,7 +213,63 @@ color:white;
     margin-top:10px;
     
 }
+/*end of addBook page*/
 
+/*FAQ Page*/
+.cpp {
+    clear: both;
+	width: 940px;
+	height: 500px;
+    padding-top:5px;
+	
+ }
+    .cpp h1 {
+    color:#7A1900;
+    font-size:16px;
+    padding-top:10px;
+    margin-left:320px;
+    
+    }
+    .cpp h4 {
+    color:black;
+    font-size:12px;
+    padding-top:10px;
+    margin-left:120px;
+    width:700px;
+    
+    
+    }
+.mark {
+width:70px;
+height:100px;
+display:inline;
+}
+    .cpp h3 {
+    color:#7A1900;
+    font-size:14px;
+    padding-top:10px;
+    margin-left:120px;
+    width:700px;
+    
+    }
+.f {
+    width:970px;
+    height:5px;
+    background: url('images/header-bg.jpg');
+    color:white;
+    font-size:18px;
+    margin-left:-10px;
+   
+
+    
+
+}
+
+
+
+
+
+/*end of FAQ Page*/
 /* header */
 #templatemo_header {
 	clear: both;
