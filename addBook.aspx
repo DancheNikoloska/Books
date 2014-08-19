@@ -2,7 +2,7 @@
 
 <asp:Content runat="server" ContentPlaceHolderID="Content1">
     <div class="addBook">
-      <h2>Внеси тука шо ти се бара!</h2>
+      <h2>Внеси ги потребните податоци</h2>
         <div class="userData">
             <asp:Table runat="server" CssClass="table1" CellPadding="10" CellSpacing="2" >
                 <asp:TableRow>
