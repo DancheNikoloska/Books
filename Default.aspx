@@ -17,25 +17,25 @@
             	<h1>Избери жанр</h1>
                 <ul>
                     
-                    <li ><a href="#"> Авантуристички</a></li>
-                    <li ><a href="#"> Автобиографски</a></li>
-                    <li ><a href="#"> Акциони</a></li>
-                    <li ><a href="#" >Бизнис</a></li>
-                    <li ><a href="#"> Биографски</a></li>
-                    <li ><a href="#" >Драма</a></li>
-                    <li ><a href="#" >Едукативни</a></li>
-                    <li ><a href="#" >Историски</a></li>
-                    <li ><a href="#" >Класици</a></li>
-                    <li ><a href="#" >Криминалистички</a></li>
-                    <li ><a href="#" >Мистерија</a></li>
-                    <li ><a href="#" >Поезија</a></li>
-                    <li ><a href="#" >Политика</a></li>
-                    <li ><a href="#" >Психолошки</a></li>
-                    <li ><a href="#" >Религија</a></li>
-                    <li ><a href="#" >Романса</a></li>
-                    <li ><a href="#"> Трилер</a></li>
-                    <li ><a href="#" >Фантастика</a></li>
-                    <li ><a href="#" >Филозофија</a></li>
+                    <li ><a href="Search.aspx?zanr=Авантуристичка">Авантуристички</a></li>
+                    <li ><a href="Search.aspx?zanr=Автобиографија"> Автобиографски</a></li>
+                    <li ><a href="Search.aspx?zanr=Акција"> Акциони</a></li>
+                    <li ><a href="Search.aspx?zanr=Бизнис" >Бизнис</a></li>
+                    <li ><a href="Search.aspx?zanr=Биографија"> Биографски</a></li>
+                    <li ><a href="Search.aspx?zanr=Драма">Драма</a></li>
+                    <li ><a href="Search.aspx?zanr=Едукативна" >Едукативни</a></li>
+                    <li ><a href="Search.aspx?zanr=Историска" >Историски</a></li>
+                    <li ><a href="Search.aspx?zanr=Класика" >Класици</a></li>
+                    <li ><a href="Search.aspx?zanr=Криминалистика" >Криминалистички</a></li>
+                    <li ><a href="Search.aspx?zanr=Мистерија" >Мистерија</a></li>
+                    <li ><a href="Search.aspx?zanr=Поезија" >Поезија</a></li>
+                    <li ><a href="Search.aspx?zanr=Политичка" >Политика</a></li>
+                    <li ><a href="Search.aspx?zanr=Психолошка" >Психолошки</a></li>
+                    <li ><a href="Search.aspx?zanr=Религија" >Религија</a></li>
+                    <li ><a href="Search.aspx?zanr=Романса" >Романса</a></li>
+                    <li ><a href="Search.aspx?zanr=Трилер"> Трилер</a></li>
+                    <li ><a href="Search.aspx?zanr=Фантастика" >Фантастика</a></li>
+                    <li ><a href="Search.aspx?zanr=Филозофија" >Филозофија</a></li>
                     
             	</ul>
             </div>

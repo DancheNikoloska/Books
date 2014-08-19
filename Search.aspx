@@ -71,6 +71,7 @@
 
       
     </asp:ListView>
-    <asp:SqlDataSource runat="server" ID="BooksData" ConnectionString='<%$ ConnectionStrings:BooksConnectionString %>' SelectCommand="SELECT * FROM [BOOKS]"></asp:SqlDataSource>
+    
+    <asp:SqlDataSource runat="server" ID="BooksData" ConnectionString='<%$ ConnectionStrings:BooksConnectionString %>' ></asp:SqlDataSource>
 
 </asp:Content>
