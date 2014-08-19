@@ -16,20 +16,40 @@ public partial class addBook : System.Web.UI.Page
     }
     protected void Button_Click(object sender, EventArgs e)
     {
-        SqlConnection konekcija = new SqlConnection();
-        konekcija.ConnectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
-        try { 
-        konekcija.Open();
-         
-         string sql = "INSERT INTO BOOKS(title, author, description, genre, number_of_pages, price, date_received) VALUES('" + naslov.Text.ToString() + "','" + avtor.Text.ToString() + "','" + opis.Text.ToString() + "','" + zanr.Text.ToString() + "','" + strani.Text.ToString() + "','"+cena.Text.ToString()+"',GETDATE())"; ;
-        SqlCommand komanda = new SqlCommand(sql, konekcija);
-       komanda.ExecuteNonQuery();
+        int c;
+        int s;
+        if (int.TryParse(cena.Text, out c) && int.TryParse(strani.Text, out s))
+        {
+                SqlConnection konekcija = new SqlConnection();
+                konekcija.ConnectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
+                try
+                {
+                    konekcija.Open();
+
+                    string sql = "INSERT INTO BOOKS(title, author, description, genre, number_of_pages, price, date_received) VALUES('" + naslov.Text.ToString() + "','" + avtor.Text.ToString() + "','" + opis.Text.ToString() + "','" + zanr.Text.ToString() + "','" + strani.Text.ToString() + "','" + cena.Text.ToString() + "',GETDATE())"; ;
+                    SqlCommand komanda = new SqlCommand(sql, konekcija);
+                    
+                    int rows = komanda.ExecuteNonQuery();
+                    if (rows == 0)
+                    {
+                        success.Text = "Неуспешно додавање!";
+                    }
+                    else
+                    { success.Text = "Успешно додавање!"; }
+                }
+                finally
+                {
+                    konekcija.Close();
+                }
+
             }
-        finally {
-        konekcija.Close();
-        }
+        
+             else
+            {
+                success.Text = "Невалидни податоци!";
+            }
+        
        
-           
       
         
     }

@@ -67,14 +67,23 @@
         </asp:Table>
            <div>
                
+               
+               
                <asp:Button CssClass="buttonDodaj" OnClick="Button_Click" runat="server" Text="Додај оглас" ValidationGroup="vs"  />
            </div>
             <div>
                 
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="naslov" Display="None" ValidationGroup="vs"></asp:RequiredFieldValidator>
-                 <asp:ValidationSummary CssClass="errors" ID="vs" runat="server" DisplayMode="List" HeaderText="Пополнете ги сите полиња!" ValidateRequestMode="Disabled" ValidationGroup="vs" />
+                 <asp:RequiredFieldValidator runat="server" ControlToValidate="avtor" Display="None" ValidationGroup="vs"></asp:RequiredFieldValidator>
+                 <asp:RequiredFieldValidator runat="server" ControlToValidate="opis" Display="None" ValidationGroup="vs"></asp:RequiredFieldValidator>
+                 <asp:RequiredFieldValidator runat="server" ControlToValidate="zanr" Display="None" ValidationGroup="vs"></asp:RequiredFieldValidator>
+                 <asp:RequiredFieldValidator runat="server" ControlToValidate="strani" Display="None" ValidationGroup="vs"></asp:RequiredFieldValidator>
+                 <asp:RequiredFieldValidator runat="server" ControlToValidate="cena" Display="None" ValidationGroup="vs"></asp:RequiredFieldValidator>
+              
+                  <asp:ValidationSummary CssClass="errors" ID="vs" runat="server" DisplayMode="List" HeaderText="Пополнете ги сите полиња!" ValidationGroup="vs" />
+              <asp:Label runat="server" CssClass="successful" ID="success"></asp:Label>
             </div>
             </div>
     </div>
-   
+  
 </asp:Content>
