@@ -30,14 +30,14 @@
 <div class="container">
 
 	<ul class="tabs">
-		<li class="tab-link current" data-tab="tab-1">Огласи</li>
-		<li class="tab-link" data-tab="tab-2">Корисници</li>
-		<li class="tab-link" data-tab="tab-3">Статистики</li>
-		<li class="tab-link" data-tab="tab-4">Tab Four</li>
+		<li class="tab-link current" data-tab="tab1">Корисници</li>
+		<li class="tab-link" data-tab="tab2">Огласи</li>
+		<li class="tab-link" data-tab="tab3">Статистики</li>
+		
 	</ul>
 
-	<div id="tab-1" class="tab-content current">
-		<asp:GridView CssClass="users_grid" ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" OnPageIndexChanging="GridView1_PageIndexChanging" OnSorting="GridView1_Sorting" AllowSorting="True" DataKeyNames="user_id" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating">
+	<div id="tab1" class="tab-content current">
+		<asp:GridView CssClass="users_grid" ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" OnPageIndexChanging="GridView1_PageIndexChanging" OnSorting="GridView1_Sorting" AllowSorting="True" DataKeyNames="user_id" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnRowDeleting="GridView1_RowDeleting">
             <Columns>
                 <asp:BoundField DataField="user_id" HeaderText="ID" Visible="False" />
                 <asp:BoundField DataField="name" HeaderText="Име" SortExpression="name" />
@@ -59,15 +59,13 @@
             <SortedDescendingHeaderStyle BackColor="#93451F" />
         </asp:GridView>
 	</div>
-	<div id="tab-2" class="tab-content">
-        
+	<div id="tab2" runat="server" class="tab-content">
+        <p style="width: 100%;"> &nbsp; &nbsp; &nbsp; &nbsp; Наслов &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp;  Автор &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;|&nbsp;  &nbsp; &nbsp;Страници&nbsp;  &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp;Жанр&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;|&nbsp;  &nbsp; &nbsp;Активирај&nbsp;  &nbsp; &nbsp;|&nbsp;  &nbsp; &nbsp;Избриши&nbsp; &nbsp; &nbsp;</p>
 	</div>
-	<div id="tab-3" class="tab-content">
+	<div runat="server" id="tab3" class="tab-content">
 		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 	</div>
-	<div id="tab-4" class="tab-content">
-		Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-	</div>
+	
 
 </div><!-- container -->
         

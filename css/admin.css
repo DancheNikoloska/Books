@@ -41,6 +41,7 @@
             border-left: 2px solid black;
             border-right: 2px solid black;
             border-bottom: 2px solid black;
+            height: 900px;
 		}
 
 		.tab-content.current{
@@ -50,3 +51,4 @@
 .users_grid {
  margin: auto;
 }
+
