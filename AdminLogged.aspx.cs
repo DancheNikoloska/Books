@@ -52,42 +52,42 @@ public partial class AdminLogged : System.Web.UI.Page
             
             while (reader.Read())
             {
+                items.InnerHtml += "<li>";
+                items.InnerHtml += "<table class=\"admin_users\" style=\"height: 50px; width: 750px; border: 2px solid #212120;margin: auto;margin-bottom: 15px;background: #EBE2C3; border-radius: 5px;padding: 10px;\">";
+                items.InnerHtml += "<tr>";
+                items.InnerHtml += "<td style=\"width: 80px;text-align: center \">";
 
-                tab2.InnerHtml += "<table class=\"admin_users\" style=\"height: 50px; width: 750px; border: 2px solid #212120;margin: auto;margin-bottom: 15px;background: #EBE2C3; border-radius: 5px;padding: 10px;\">";
-                tab2.InnerHtml += "<tr>";
-                tab2.InnerHtml += "<td style=\"width: 80px;text-align: center \">";
+                items.InnerHtml += reader["title"];
 
-                tab2.InnerHtml += reader["title"];
+                items.InnerHtml += "</td>";
+                items.InnerHtml += "<td style=\"width: 80px;text-align: center \">";
 
-                tab2.InnerHtml += "</td>";
-                tab2.InnerHtml += "<td style=\"width: 80px;text-align: center \">";
+                items.InnerHtml += reader["author"];
 
-                tab2.InnerHtml += reader["author"];
+                items.InnerHtml += "</td>";
+                items.InnerHtml += "<td style=\"width: 80px;text-align: center; \">";
+                items.InnerHtml += reader["number_of_pages"];
 
-                tab2.InnerHtml += "</td>";
-                tab2.InnerHtml += "<td style=\"width: 80px;text-align: center; \">";
-                tab2.InnerHtml += reader["number_of_pages"];
+                items.InnerHtml += "</td>";
+                items.InnerHtml += "<td style=\"width: 80px;text-align: center \">";
+                items.InnerHtml += reader["genre"];
 
-                tab2.InnerHtml += "</td>";
-                tab2.InnerHtml += "<td style=\"width: 80px;text-align: center \">";
-                tab2.InnerHtml += reader["genre"];
+                items.InnerHtml += "</td>";
 
-                tab2.InnerHtml += "</td>";
-
-                tab2.InnerHtml += "<td style=\"width: 80px;text-align: center \">";
+                items.InnerHtml += "<td style=\"width: 80px;text-align: center \">";
                 if ((Convert.ToInt32(reader["activated"]) == 0))
-                    tab2.InnerHtml += ("<a href=\"DeleteBook.aspx\"><input type=\"button\"  id=\"" + reader["book_id"] + "\"  runat=\"server\" style=\"width: 90px;\"  value=\"Активирај\" ></input></a>");
+                    items.InnerHtml += ("<a href=\"DeleteBook.aspx\"><input type=\"button\"  id=\"" + reader["book_id"] + "\"  runat=\"server\" style=\"width: 90px;\"  value=\"Активирај\" ></input></a>");
                 else
-                    tab2.InnerHtml += ("<input type=\"button\"  id=\"" + reader["book_id"] + "\"  runat=\"server\" value=\"Активиран\" style=\"width: 90px;\"  disabled />");
+                    items.InnerHtml += ("<input type=\"button\"  id=\"" + reader["book_id"] + "\"  runat=\"server\" value=\"Активиран\" style=\"width: 90px;\"  disabled />");
 
-                tab2.InnerHtml += "</td>";
-                tab2.InnerHtml += "<td style=\"width: 80px;text-align: center \">";
-                tab2.InnerHtml += "<a href=\"DeleteBook.aspx\"><img src=\"css/images/delete.jpg\"  /></a>";
+                items.InnerHtml += "</td>";
+                items.InnerHtml += "<td style=\"width: 80px;text-align: center \">";
+                items.InnerHtml += "<a href=\"DeleteBook.aspx?id="+reader["book_id"]+"\"><img src=\"css/images/delete.jpg\"  /></a>";
 
-                tab2.InnerHtml += "</td>";
-                tab2.InnerHtml += "</tr>";
-                tab2.InnerHtml += "</table>";
-                
+                items.InnerHtml += "</td>";
+                items.InnerHtml += "</tr>";
+                items.InnerHtml += "</table>";
+                items.InnerHtml += "</li>";
             }
 
         }

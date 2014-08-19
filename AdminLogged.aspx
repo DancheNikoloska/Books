@@ -8,6 +8,7 @@
     <link  href="css/admin.css" rel="stylesheet" type="text/css" />
      <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
      <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/quickpager.jquery.js"></script>
      <script>
          $(document).ready(function () {
 
@@ -21,8 +22,65 @@
                  $("#" + tab_id).addClass('current');
              })
 
-         })
+
+
+         });
+        
      </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+
+            $("ul.paging").quickPager();
+        });
+    </script>
+
+   <style type="text/css">
+
+
+
+
+
+
+
+       .paging li {
+           list-style: none;
+       }
+
+ul.simplePagerNav li{
+    display:block;
+    float: left;
+    padding: 3px;
+    margin-bottom: 10px;
+    font-family: georgia;
+}
+ul.simplePagerNav {
+  text-align: center;
+ 
+}
+
+ul.simplePagerNav li a{
+    color: #333;
+    text-decoration: none;
+}
+
+li.currentPage {
+	    background: red;
+        background: #EBE2C3;	
+}
+
+ul.simplePagerNav li.currentPage a {
+	color: #fff;	
+}
+
+
+
+
+
+
+</style> 
+
+   
 </head>
 <body>
     <form id="form1" runat="server">
@@ -61,7 +119,8 @@
 	</div>
 	<div id="tab2" runat="server" class="tab-content">
         <p style="width: 100%;"> &nbsp; &nbsp; &nbsp; &nbsp; Наслов &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp;  Автор &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;|&nbsp;  &nbsp; &nbsp;Страници&nbsp;  &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp;Жанр&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;|&nbsp;  &nbsp; &nbsp;Активирај&nbsp;  &nbsp; &nbsp;|&nbsp;  &nbsp; &nbsp;Избриши&nbsp; &nbsp; &nbsp;</p>
-	</div>
+	    <ul class="paging" style="margin-left: -38px;" id="items" runat="server" ></ul>
+    </div>
 	<div runat="server" id="tab3" class="tab-content">
 		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 	</div>
