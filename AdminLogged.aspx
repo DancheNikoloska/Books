@@ -147,7 +147,7 @@ ul.simplePagerNav li.currentPage a {
 <BorderSkin BackColor="235, 226, 195"></BorderSkin>
         </asp:Chart>
         
-         <asp:SqlDataSource ID="adminUsers" runat="server" ConnectionString="<%$ ConnectionStrings:BooksConnectionString %>" SelectCommand="select TOP 5 BOOKS.user_id as ID,USERS.email as Емаил, count(book_id) as Вкупно_огласи from BOOKS,USERS where books.user_id= USERS.user_id group by BOOKS.user_id, USERS.email"></asp:SqlDataSource>
+         <asp:SqlDataSource ID="adminUsers" runat="server" ConnectionString="<%$ ConnectionStrings:BooksConnectionString %>" SelectCommand="select TOP 5 BOOKS.user_id as ID,USERS.email as Емаил, count(book_id) as Вкупно_огласи from BOOKS,USERS where BOOKS.user_id= USERS.user_id group by BOOKS.user_id, USERS.email"></asp:SqlDataSource>
 
         <hr  style="width: 90%; color: black; height: 3px;border: 1px solid brown;background: #EBE2C3; "/>
 
