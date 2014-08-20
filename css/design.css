@@ -306,14 +306,14 @@ width:700px;
 /* header */
 #templatemo_header {
 	clear: both;
-	width: 940px;
+	width: 970px;
 	height: 300px;
 	margin-bottom:50px;
     background: url('images/bg.jpg') repeat;
-	background: url('images/reading.jpg') no-repeat center; 
+	 
 	opacity : 0.9;
 	padding: 0 0;
-    margin-left: auto;
+    margin-left: -10px;
     margin-right: auto;
     margin-top: auto;
 }
