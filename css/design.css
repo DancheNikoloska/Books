@@ -223,7 +223,31 @@ color:white;
 }
 
 /*end of addBook page*/
+/*myBooks Page*/
 
+.myBooks {
+    clear: both;
+	width: 940px;
+	height: 900px;
+    padding-top:5px;
+}
+.myBooks h2 {
+    color:#7A1900;
+    font-size:16px;
+    padding-top:10px;
+    margin-left:320px;
+    
+    }
+.myB {
+height:800px;
+width:940px;
+margin-left:30px;
+padding-top:20px;
+}
+
+
+
+/*end of myBooks Page*/
 /*FAQ Page*/
 .cpp {
     clear: both;

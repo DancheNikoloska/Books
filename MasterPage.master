@@ -36,7 +36,8 @@
             <li ><a href="Default.aspx" class="current" >Дома</a></li>
             <li ><a href="Search.aspx" >Книги</a></li>
             <li ><a href="About.aspx" >За нас</a></li>            
-            <li ><a href="FAQs.aspx" >ЧПП</a></li>  
+            <li ><a href="FAQs.aspx" >ЧПП</a></li> 
+            
             
     	</ul>
     <div id="login" runat="server">
