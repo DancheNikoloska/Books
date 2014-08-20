@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AdminLogged.aspx.cs" Inherits="AdminLogged" %>
 
+<%@ Register Assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.DataVisualization.Charting" TagPrefix="asp" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -84,6 +86,7 @@ ul.simplePagerNav li.currentPage a {
 </head>
 <body>
     <form id="form1" runat="server">
+         
         
 <div class="container">
 
@@ -122,7 +125,70 @@ ul.simplePagerNav li.currentPage a {
 	    <ul class="paging" style="margin-left: -38px;" id="items" runat="server" ></ul>
     </div>
 	<div runat="server" id="tab3" class="tab-content">
-		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+       <asp:Chart Height="400" Width="700" ID="Chart1" runat="server" DataSourceID="adminUsers" Palette="Chocolate" BorderSkin-BackColor="#EBE2C3" PaletteCustomColors="#EBE2C3" >
+            <Series>
+                <asp:Series Name="Series1" XValueMember="Емаил" YValueMembers="Вкупно_огласи"></asp:Series>
+            </Series>
+            <ChartAreas >
+                <asp:ChartArea Name="ChartArea1">
+                    <AxisY Title="Вкупно огласи">
+                    </AxisY>
+                    <AxisX Title="Емаил">
+                    </AxisX>
+                </asp:ChartArea>
+            </ChartAreas>
+
+            <Titles>
+                <asp:Title Text="Топ 5 корисници според објавени огласи" Name="title1">
+                </asp:Title>
+            </Titles>
+
+<BorderSkin BackColor="235, 226, 195"></BorderSkin>
+        </asp:Chart>
+        
+         <asp:SqlDataSource ID="adminUsers" runat="server" ConnectionString="<%$ ConnectionStrings:BooksConnectionString %>" SelectCommand="select TOP 5 BOOKS.user_id as ID,USERS.email as Емаил, count(book_id) as Вкупно_огласи from BOOKS,USERS where books.user_id= USERS.user_id group by BOOKS.user_id, USERS.email"></asp:SqlDataSource>
+
+        <hr  style="width: 90%; color: black; height: 3px;border: 1px solid brown;background: #EBE2C3; "/>
+
+        
+        <asp:Chart Height="400" Width="700" ID="Chart2" runat="server" DataSourceID="admin_time" Palette="EarthTones">
+            <Series>
+                <asp:Series Name="Series1" ChartType="Spline" XValueMember="MonthName" YValueMembers="total" ></asp:Series>
+            </Series>
+            <ChartAreas>
+                <asp:ChartArea Name="ChartArea1">
+                    <AxisY Title="Број на огласи">
+                    </AxisY>
+                    <AxisX Title="Месец">
+                    </AxisX>
+                </asp:ChartArea>
+            </ChartAreas>
+             <Titles>
+                 <asp:Title Name="Title1" Text="Вкупно огласи по месец">
+                 </asp:Title>
+             </Titles>
+        </asp:Chart>
+        
+         <asp:SqlDataSource ID="admin_time" runat="server" ConnectionString="<%$ ConnectionStrings:BooksConnectionString %>" SelectCommand="SELECT     CASE { fn MONTH(date_received) } 
+            when 0 then N'Јан'
+            when 1 then N'Феб'
+            when 2 then N'Мар'
+            when 3 then N'Апр'
+            when 4 then N'Мај'
+            when 5 then N'Јун'
+            when 6 then N'Јул'
+            when 7 then N'Авг'
+            when 8 then N'Сеп'
+            when 9 then N'Окт'
+            when 10 then N'Нов'
+            when 11 then N'Дек'
+           END
+      AS MonthName,  COUNT(book_id) AS total
+    FROM         BOOKS
+   
+    GROUP BY { fn MONTH(date_received) }
+    ORDER BY { fn MONTH(date_received) }"></asp:SqlDataSource>
 	</div>
 	
 

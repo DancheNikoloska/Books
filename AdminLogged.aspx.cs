@@ -94,6 +94,13 @@ public partial class AdminLogged : System.Web.UI.Page
         catch { }
         finally { konekcija3.Close(); }
 
+
+        //charts
+
+       
+
+
+
     }
 
     protected void Button_Click(object sender, EventArgs e)
