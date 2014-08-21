@@ -3,7 +3,7 @@
 <asp:Content ContentPlaceHolderID="Content1" runat="server" >
 
 
-    <div id="templatemo_header" style="background: url('css/images/header.jpg') center no-repeat; width:970px; height:310px; margin-left:-10px">
+    <div id="templatemo_header" style="background: url('css/images/header_red.jpg') center no-repeat; opacity:0.98 width:970px; height:310px; margin-left:-10px">
     	
         
         
