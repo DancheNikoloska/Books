@@ -16,46 +16,35 @@
     <script type="text/javascript" src="js/quickpager.jquery.js"></script>
        <style type="text/css">
 
-
-
-
-
-
-
        .paging li {
            list-style: none;
        }
 
-ul.simplePagerNav li{
-    display:block;
-    float: left;
-    padding: 3px;
-    margin-bottom: 10px;
-    font-family: georgia;
-}
-ul.simplePagerNav {
-  text-align: center;
+        ul.simplePagerNav li{
+           display:block;
+           float: left;
+           padding: 3px;
+           margin-bottom: 10px;
+           font-family: georgia;
+       }
+        ul.simplePagerNav {
+           text-align: center;
  
-}
+       }
 
-ul.simplePagerNav li a{
-    color: #333;
-    text-decoration: none;
-}
+        ul.simplePagerNav li a{
+           color: #333;
+           text-decoration: none;
+       }
 
-li.currentPage {
-	    background: red;
-        background: #EBE2C3;	
-}
+        li.currentPage {
+	       background: red;
+           background: #EBE2C3;	
+       }
 
-ul.simplePagerNav li.currentPage a {
-	color: #fff;	
-}
-
-
-
-
-
+        ul.simplePagerNav li.currentPage a {
+	       color: #fff;	
+       }
 
 </style> 
     <script type="text/javascript">
@@ -96,7 +85,7 @@ ul.simplePagerNav li.currentPage a {
     	</ul>
     <div id="login" runat="server">
         <div class="container" >
-	<a id="modal_trigger" style="margin-bottom: -2px;"  href="#modal" class="btn">Најава/Регистрација</a>
+	<a runat="server" id="modal_trigger" style="margin-bottom: -20px;overflow:hidden; border-bottom: 1px solid white;border-right: 2px solid #7A1900;"  href="#modal" class="btn">Најава/Регистрација</a>
 
 	<div id="modal" class="popupContainer" style="display:none; margin-top: -155px; border-right: 2px solid #7A1900; border-bottom: 2px solid #7A1900;">
 		<header class="popupHeader">
@@ -265,10 +254,10 @@ ul.simplePagerNav li.currentPage a {
     
     <div id="templatemo_footer">
     
-	       <a href="subpage.html">Дома</a> | <a href="subpage.html">Книги</a> | <a href="#" >За нас</a> | <a href="#">ЧПП</a><br />
+	       <a href="Default.aspx">Дома</a> | <a href="Search.aspx">Книги</a> | <a href="About.aspx" >За нас</a> | <a href="FAQs.aspx">ЧПП</a><br />
         Copyright © 2024 <a href="#" ><strong >Danche</strong></a> | Designed by Danica Nikoloska & Goran Gjorgievski	</div> 
     <!-- end of footer -->
-<!--  Free CSS Template www.templatemo.com -->
+
 </div> <!-- end of container -->
     </form>
 </body>

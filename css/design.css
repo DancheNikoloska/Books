@@ -11,6 +11,14 @@ body {
 }
 a:link, a:visited { color: #e6e154; text-decoration: none; font-weight: bold;} 
 a:active, a:hover { color: #e6e154; text-decoration: underline;}
+.button_profile {
+ background : url('images/header-bg.jpg') repeat;
+ color: white;
+ font-weight: bold;
+ height: 30px;
+ margin: 5px;
+
+}
 
 p {
 	margin: 0px;
