@@ -42,18 +42,26 @@
 .btn_red {background: url('images/header-bg.jpg') repeat; color: #FFF;}
 
 .btn_add {
-    border-top: 2px solid #7A1900;
+    border-top: 2px solid #7A1900;  
+    border-right: 2px solid #7A1900;
     border-left: 2px solid #7A1900;
     padding:10px 20px; 
     background: white;
     color: #7A1900;
-    height: 15px; 
+    text-decoration: none;
+    text-align: center;
     overflow: visible;
     display:inline;
     float: left;
     text-decoration: none;
     text-align: center;
-    width: 70px;
+    margin-left: -63px;
+    margin-top: 12px;
+}
+.add2 {
+ border-right: 2px solid #7A1900;
+ border-bottom: 2px solid white;
+ cursor: pointer;
 }
 
 .btn:hover {background: #E4E4E2;}

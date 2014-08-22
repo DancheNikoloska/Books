@@ -18,7 +18,7 @@
                 <td>
          <div id="tab1" runat="server" class="tab-content">
                 <p style="width: 100%;color: black;margin: auto;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Наслов &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  Автор &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp;   |&nbsp;  &nbsp; &nbsp;Страници&nbsp; &nbsp; &nbsp; &nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;Жанр&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp; &nbsp;Активиран&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp; &nbsp;|&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Избриши&nbsp; &nbsp; &nbsp;</p>
-	            <ul class="paging" style="margin-left: -38px;" id="items" runat="server" ></ul>
+	            <ul class="paging" style="margin-left: -1px;" id="items" runat="server" ></ul>
          </div>
                     </td>
             </tr>
@@ -29,7 +29,7 @@
             <table>
                  <tr style="border-bottom: 1px solid black;">
                  <td colspan="5">
-                 <div style="margin-left: 343px;">
+                 <div style="margin-left: 143px;">
                   <asp:Button Width="140" CssClass="button_profile" CausesValidation="true" ID="Button4" runat="server" OnClick="Button1_Click" Text="Ваши огласи" />
                   <asp:Button Width="140" CssClass="button_profile" CausesValidation="true" ID="Button5" runat="server" OnClick="Button2_Click" Text="Промени профил" />
                  </div>

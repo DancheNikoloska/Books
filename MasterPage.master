@@ -65,24 +65,9 @@
 <body >
 <form runat="server">
 <div id="templatemo_menu" >
-    <a href="addBook.aspx" id="add_oglas"  class="btn_add" style="border-top: 2px solid #7A1900;
-    border-right: 2px solid #7A1900;
-    
-    padding:10px 20px; 
-    background: white;
-    color: #7A1900;
-    height: 17px; 
-    overflow: visible;
-    display:inline;
-    float: left;
-    text-decoration: none;
-    text-align: center;
-    width: 137px;
-    margin-left: -62px;
-    margin-top: 11px;
-    ">Додаj оглас</a>
+    <asp:Button OnClick="add_oglas_Click" runat="server" Height="37"  Font-Bold="true" Width="190" ID="add_oglas"  CssClass="btn_add add2" Text="Додај оглас"></asp:Button>
     	<ul style="margin:0 0 0 260px">
-            <li ><a href="Default.aspx" class="current" >Дома</a></li>
+            <li ><a href="Default.aspx" >Дома</a></li>
             <li ><a href="Search.aspx" >Книги</a></li>
             <li ><a href="About.aspx" >За нас</a></li>            
             <li ><a href="FAQs.aspx" >ЧПП</a></li> 

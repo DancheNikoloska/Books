@@ -118,6 +118,10 @@ public partial class MasterPage : System.Web.UI.MasterPage
     }
     protected void Button2_Click(object sender, EventArgs e)
     {
+       
+
+
+
         bool valid = false;
 
         //get inputs
@@ -128,6 +132,38 @@ public partial class MasterPage : System.Web.UI.MasterPage
         if(TextBox4.Text!=null)
         phone = TextBox4.Text.ToString();
         string password = TextBox6.Text.ToString();
+
+
+        //check if email exists
+
+        bool valid3 = false;
+        SqlConnection konekcija3 = new SqlConnection();
+        konekcija3.ConnectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
+        string sql3 = "SELECT * FROM USERS WHERE email='"+email+"'";
+        SqlCommand komanda3 = new SqlCommand(sql3, konekcija3);
+        try
+        {
+
+            konekcija3.Open();
+            SqlDataReader reader3 = komanda3.ExecuteReader();
+
+            while (reader3.Read())
+            {
+
+                if (reader3["email"] != null)
+                    valid3 = false;
+               
+            }
+
+        }
+        catch { }
+        finally { konekcija3.Close(); }
+        if (!valid3)
+        {
+            Response.Write("<p style=\"margin-left: 37%;background: white;width: 260px;height: 20px; border-left: 2px solid #7A1900; border-bottom: 2px solid #7A1900; border-right: 2px solid #7A1900;font-weight: bold; color:#B94629;padding-left: 100px;\">Емаилот е во употреба.</p>");
+            modal_trigger.Style.Add("margin-top", "16px");
+        }
+        else { 
         
          
         //database connection
@@ -147,7 +183,52 @@ public partial class MasterPage : System.Web.UI.MasterPage
         finally { konekcija.Close(); }
         if (valid) { 
         Session["username"] = name + " " + surname;
+            //get new user id
+        SqlConnection konekcija2 = new SqlConnection();
+        konekcija2.ConnectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
+        string sql2 = "SELECT * FROM USERS WHERE email='"+email+"'";
+        SqlCommand komanda2 = new SqlCommand(sql2, konekcija2);
+        try
+        {
+
+            konekcija2.Open();
+            SqlDataReader reader2 = komanda2.ExecuteReader();
+
+            while (reader2.Read())
+            {
+
+                if (reader2["email"].ToString() != null)
+                {
+
+                    valid = true;
+                    Session["username"] = reader2["name"] + " " + reader2["surname"];
+                    Session["user_id"] = reader2["user_id"];
+
+
+                    Response.Redirect("Default.aspx", true);
+                    break;
+
+
+                }
+            }
+
+        }
+        catch { }
+        finally { konekcija2.Close(); }
+
         Response.Redirect("Default.aspx", false);
+        }
+    }
+    }
+    protected void add_oglas_Click(object sender, EventArgs e)
+    {
+        if (Session["user_id"] != null)
+        {
+            Response.Redirect("addBook.aspx", true);
+        }
+        else {
+            Response.Write("<p style=\"margin-left: 37%;background: white;width: 260px;height: 20px; border-left: 2px solid #7A1900; border-bottom: 2px solid #7A1900; border-right: 2px solid #7A1900;font-weight: bold; color:#B94629;padding-left: 100px;\">Потребно е да се најавите.</p>");
+            modal_trigger.Style.Add("margin-top", "16px");
         }
     }
 }

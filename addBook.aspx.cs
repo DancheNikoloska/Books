@@ -26,7 +26,7 @@ public partial class addBook : System.Web.UI.Page
                 {
                     konekcija.Open();
 
-                    string sql = "INSERT INTO BOOKS(title, author, description, genre, number_of_pages, price, date_received) VALUES('" + naslov.Text.ToString() + "','" + avtor.Text.ToString() + "','" + opis.Text.ToString() + "','" + zanr.Text.ToString() + "','" + strani.Text.ToString() + "','" + cena.Text.ToString() + "',GETDATE())"; ;
+                    string sql = "INSERT INTO BOOKS(title, author, description, genre, number_of_pages, price, date_received,user_id) VALUES('" + naslov.Text.ToString() + "','" + avtor.Text.ToString() + "','" + opis.Text.ToString() + "','" + zanr.Text.ToString() + "','" + strani.Text.ToString() + "','" + cena.Text.ToString() + "',GETDATE(),"+Session["user_id"]+")"; 
                     SqlCommand komanda = new SqlCommand(sql, konekcija);
                     
                     int rows = komanda.ExecuteNonQuery();

@@ -49,6 +49,7 @@ public partial class ProfilePage : System.Web.UI.Page
         catch { }
         finally { konekcija4.Close(); }
         //fill books
+        if (!IsPostBack) { 
         SqlConnection konekcija3 = new SqlConnection();
         konekcija3.ConnectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
         string sql3 = "select * from BOOKS where user_id=" + id;
@@ -101,6 +102,7 @@ public partial class ProfilePage : System.Web.UI.Page
         }
         catch { }
         finally { konekcija3.Close(); }
+        }
         }
     }
     protected void Button1_Click(object sender, EventArgs e)
