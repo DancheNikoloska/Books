@@ -8,7 +8,7 @@
 
        
         <EmptyDataTemplate>
-            <table runat="server" style="">
+            <table runat="server" style="width:920px ">
                 <tr>
                     <td>No data was returned.</td>
                 </tr>
@@ -44,7 +44,7 @@
 
         </ItemTemplate>
         <LayoutTemplate>
-            <table  runat="server" >
+            <table  runat="server" style="width:920px " >
                 <tr runat="server" >
                     <td runat="server" >
                         <table cellspacing="5" runat="server" id="groupPlaceholderContainer"  border="0" style="margin: 35px;" >

@@ -15,12 +15,12 @@ public partial class Search : System.Web.UI.Page
         {
            
             string zanr = Request.QueryString["zanr"];
-            BooksData.SelectCommand = "SELECT * FROM BOOKS WHERE genre='" + zanr + "'";
+            BooksData.SelectCommand = "SELECT * FROM BOOKS WHERE genre='" + zanr + "' and activated='1'";
             //proba.Text = zanr;
         }
         else
         {
-            BooksData.SelectCommand = "SELECT * FROM BOOKS";
+            BooksData.SelectCommand = "SELECT * FROM BOOKS WHERE activated='1'";
         }
     }
 }

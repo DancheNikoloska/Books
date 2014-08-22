@@ -63,26 +63,26 @@ public partial class ProfilePage : System.Web.UI.Page
                 items.InnerHtml += "<li>";
                 items.InnerHtml += "<table class=\"admin_users\" style=\"height: 50px; width: 750px; border: 2px solid #212120;margin: auto;margin-bottom: 15px;background: #EBE2C3; border-radius: 5px;padding: 10px;\">";
                 items.InnerHtml += "<tr>";
-                items.InnerHtml += "<td style=\"width: 80px;text-align: center \">";
+                items.InnerHtml += "<td style=\"width: 80px;text-align: center;color:black \">";
 
                 items.InnerHtml += reader["title"];
 
                 items.InnerHtml += "</td>";
-                items.InnerHtml += "<td style=\"width: 80px;text-align: center \">";
+                items.InnerHtml += "<td style=\"width: 80px;text-align: center;color:black \">";
 
                 items.InnerHtml += reader["author"];
 
                 items.InnerHtml += "</td>";
-                items.InnerHtml += "<td style=\"width: 80px;text-align: center; \">";
+                items.InnerHtml += "<td style=\"width: 80px;text-align: center;color:black \">";
                 items.InnerHtml += reader["number_of_pages"];
 
                 items.InnerHtml += "</td>";
-                items.InnerHtml += "<td style=\"width: 80px;text-align: center \">";
+                items.InnerHtml += "<td style=\"width: 80px;text-align: center;color:black \">";
                 items.InnerHtml += reader["genre"];
 
                 items.InnerHtml += "</td>";
 
-                items.InnerHtml += "<td style=\"width: 80px;text-align: center \">";
+                items.InnerHtml += "<td style=\"width: 80px;text-align: center;color:black \">";
                 if ((Convert.ToInt32(reader["activated"]) == 0))
                     items.InnerHtml += ("<input type=\"button\"  id=\"" + reader["book_id"] + "\"  runat=\"server\" style=\"width: 90px;\"  value=\"Неактивиран\" disabled></input>");
                 else
@@ -105,6 +105,7 @@ public partial class ProfilePage : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
+        if (MultiView1.ActiveViewIndex!=0)
         MultiView1.ActiveViewIndex = 0;
     }
     protected void Button2_Click(object sender, EventArgs e)

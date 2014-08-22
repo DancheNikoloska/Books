@@ -5,7 +5,7 @@
     <br />
     <br />
     <p class="about_content">
-        Веб страницата Danche.com е формирана во 2014 год. Основачи на истата се двајца студенти на ФИНКИ -
+        Веб страницата Сакамдачитам.com е формирана во 2014 год. Основачи на истата се двајца студенти на ФИНКИ -
         Горан Ѓоргиевски и Даница Николоска. Истата беше првично започната како проект на факултетот. 
          
     </p>
@@ -23,8 +23,8 @@
         Со оглед на големиот број мејлови кои ги добиваме секој ден, се извинуваме ако не успееме да одговориме на сите.
         <br />
         <br />
-        <a href="mailto: danche@danche.com">emblabla@blabal.com</a><br />
-        <a href="mailto: goran@goran.com">tmp@tmp.com</a>
+        <a href="mailto: danche@danche.com">goran_knigi@gmail.com</a><br />
+        <a href="mailto: goran@goran.com">sakamdacitam@gmail.com</a>
     </p>
     <br />
 </asp:Content>
