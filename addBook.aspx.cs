@@ -12,7 +12,10 @@ public partial class addBook : System.Web.UI.Page
      
     protected void Page_Load(object sender, EventArgs e)
     {
-       
+        if (Session["user_id"] == null)
+        {
+            Response.Redirect("Default.aspx", true);
+        }  
     }
     protected void Button_Click(object sender, EventArgs e)
     {
@@ -26,7 +29,7 @@ public partial class addBook : System.Web.UI.Page
                 {
                     konekcija.Open();
 
-                    string sql = "INSERT INTO BOOKS(title, author, description, genre, number_of_pages, price, date_received,user_id) VALUES('" + naslov.Text.ToString() + "','" + avtor.Text.ToString() + "','" + opis.Text.ToString() + "','" + zanr.Text.ToString() + "','" + strani.Text.ToString() + "','" + cena.Text.ToString() + "',GETDATE(),"+Session["user_id"]+")"; 
+                    string sql = "INSERT INTO BOOKS(title, author, description, genre, number_of_pages, price, date_received,image,user_id,activated) VALUES('" + naslov.Text.ToString() + "','" + avtor.Text.ToString() + "','" + opis.Text.ToString() + "','" + zanr.Text.ToString() + "','" + strani.Text.ToString() + "','" + cena.Text.ToString() + "',GETDATE(),'no-image.jpg',"+Session["user_id"]+",0)"; 
                     SqlCommand komanda = new SqlCommand(sql, konekcija);
                     
                     int rows = komanda.ExecuteNonQuery();

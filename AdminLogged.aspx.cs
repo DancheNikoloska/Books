@@ -13,10 +13,10 @@ public partial class AdminLogged : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        /*
+        
         if (Session["admin_logged"] == null) {
             Response.Redirect("AdminPage.aspx", true);
-        }*/
+        }
         if (!Page.IsPostBack) { 
         SqlConnection konekcija = new SqlConnection();
         konekcija.ConnectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
@@ -76,7 +76,7 @@ public partial class AdminLogged : System.Web.UI.Page
 
                 items.InnerHtml += "<td style=\"width: 80px;text-align: center \">";
                 if ((Convert.ToInt32(reader["activated"]) == 0))
-                    items.InnerHtml += ("<a href=\"ActivateBook.aspx?id="+reader["book_id"]+"\"><input type=\"button\"  id=\"" + reader["book_id"] + "\"  runat=\"server\" style=\"width: 90px;\"  value=\"Активирај\" ></input></a>");
+                    items.InnerHtml += ("<a href=\"ActivateBook.aspx?book_id="+reader["book_id"]+"\"><input type=\"button\"  id=\"" + reader["book_id"] + "\"  runat=\"server\" style=\"width: 90px;\"  value=\"Активирај\" ></input></a>");
                 else
                     items.InnerHtml += ("<input type=\"button\"  id=\"" + reader["book_id"] + "\"  runat=\"server\" value=\"Активиран\" style=\"width: 90px;\"  disabled />");
 

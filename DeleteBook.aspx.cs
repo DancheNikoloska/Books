@@ -26,6 +26,7 @@ public partial class DeleteBook : System.Web.UI.Page
         {
             konekcija.Open();
             komanda.ExecuteNonQuery();
+            
         }
         catch { }
         finally { konekcija.Close();

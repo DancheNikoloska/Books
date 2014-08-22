@@ -21,7 +21,7 @@
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell HorizontalAlign="Center">Лозинка:</asp:TableCell>
-                <asp:TableCell><asp:TextBox ID="password" Height="20px" runat="server"></asp:TextBox></asp:TableCell>
+                <asp:TableCell><asp:TextBox TextMode="Password" ID="password" Height="20px" runat="server"></asp:TextBox></asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell ColumnSpan="2"  HorizontalAlign="Center"><asp:Button OnClick="Unnamed_Click" CssClass="buttonAdmin" runat="server" Text="Најава" /></asp:TableCell>
