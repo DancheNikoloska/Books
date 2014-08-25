@@ -136,7 +136,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
         //check if email exists
 
-        bool valid3 = false;
+        bool valid3=true;
         SqlConnection konekcija3 = new SqlConnection();
         konekcija3.ConnectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
         string sql3 = "SELECT * FROM USERS WHERE email='"+email+"'";

@@ -14,7 +14,7 @@ public partial class _Default : System.Web.UI.Page
     {
         SqlConnection konekcija = new SqlConnection();
         konekcija.ConnectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
-        string sql = "select * from BOOKS";
+        string sql = "select * from BOOKS order by date_received desc;";
         SqlCommand komanda = new SqlCommand(sql, konekcija);
         try
         {
@@ -25,7 +25,7 @@ public partial class _Default : System.Web.UI.Page
             {
                 if (i == 1)
                 {
-                    string d = Regex.Match(reader["description"].ToString(), @"^(\w+\b.*?){13}").ToString();
+                    string d = Regex.Match(reader["description"].ToString(), @"^(\w+\b.*?){15}").ToString();
                     box1.InnerHtml = "<h1>" + reader["title"] + " - " + reader["author"] + "</h1>" +
                    "<img src=css/images/" + reader["image"] + " alt=image   />" +
                    "<div class=product_info>" +
@@ -46,7 +46,7 @@ public partial class _Default : System.Web.UI.Page
 
                 if (i == 3)
                 {
-                    string d = Regex.Match(reader["description"].ToString(), @"^(\w+\b.*?){14}").ToString();
+                    string d = Regex.Match(reader["description"].ToString(), @"^(\w+\b.*?){11}").ToString();
                     box3.InnerHtml = "<h1>" + reader["title"] + " - " + reader["author"] + "</h1>" +
                    "<img src=css/images/" + reader["image"] + " alt=image   />" +
                    "<div class=product_info>" +
@@ -57,7 +57,7 @@ public partial class _Default : System.Web.UI.Page
 
                 if (i == 4)
                 {
-                    string d = Regex.Match(reader["description"].ToString(), @"^(\w+\b.*?){12}").ToString();
+                    string d = Regex.Match(reader["description"].ToString(), @"^(\w+\b.*?){13}").ToString();
                     box4.InnerHtml = "<h1>" + reader["title"] + " - " + reader["author"] + "</h1>" +
                    "<img src=css/images/" + reader["image"] + " alt=image   />" +
                    "<div class=product_info>" +

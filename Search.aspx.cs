@@ -15,7 +15,7 @@ public partial class Search : System.Web.UI.Page
         {
            
             string zanr = Request.QueryString["zanr"];
-            BooksData.SelectCommand = "SELECT * FROM BOOKS WHERE genre='" + zanr + "' and activated='1'";
+            BooksData.SelectCommand = "SELECT * FROM BOOKS WHERE genre=N'" + zanr + "' and activated='1'";
             //proba.Text = zanr;
         }
         else
