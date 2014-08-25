@@ -41,7 +41,7 @@ public partial class _Default : System.Web.UI.Page
                    "<div class=product_info>" +
                    "<p>" + d + " ..." + "</p>" +
                    " <h3>" + reader["price"] + " ден." + "</h3>" +
-                   "<div class=detail_button><a href=BookDetails.aspx?id=" + reader["book_id"] + ">Повеќе</a></div></div>";
+                   "<div class=detail_button><a href=BookDetails.aspx?id=" + reader["book_id"] +">Повеќе</a></div></div>";
                 }
 
                 if (i == 3)
